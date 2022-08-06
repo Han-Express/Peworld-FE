@@ -5,7 +5,9 @@ import Profile from '../../Layout/Profile'
 
 const showProfile = () => {
   return (
+    <>
     <Profile/>
+    </>
   )
 }
 
