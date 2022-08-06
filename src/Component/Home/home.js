@@ -9,13 +9,13 @@ const Homecomp = () => {
     }
 
     return (
-        <div className='flex flex-col px-5 py-14 justify-content items-center bg-slate-300 h-full w-full'>
+        <div className='flex flex-col px-5 py-14 justify-content items-center bg-[#E5E5E5] h-full w-full'>
             <div className='bg-white rounded h-14 mb-8 flex w-4/5 justify-between items-center '>
                 <div className='flex w-full relative items-center justify-between border-r-[2px] border-gray-200'>
                     <div className='flex w-full px-4'>
                         <input text="input" name="search" placeholder="Search for any skill" aria-label="Search for any skill" className="outline-none w-full px-3 py-2 placeholder-gray-500 text-black rounded" />
                     </div>
-                    <div className='mr-5'><img src='/image/search.png'></img></div>
+                    <button className='mr-5'><img src='/img/search.png'></img></button>
                 </div>
                 <div className='flex'>
                     <div class='flex justify-center items-center'>
@@ -39,21 +39,21 @@ const Homecomp = () => {
                             )}
                         </div>
                     </div>
-                    <button className='rounded bg-violet-800 text-white px-6 py-2 mr-6 h-1/2 text-sm hover:bg-violet-600'>Search</button>
+                    <button className='rounded bg-[#5E50A1] text-white px-6 py-2 mr-6 h-1/2 text-sm hover:bg-violet-600'>Search</button>
                 </div>
             </div>
             <div className='bg-white rounded w-4/5'>
                 <div className='flex px-4 py-4 mt-4 mb-4 ml-2 mr-2 items-center justify-between'>
                     <div className='flex'>
                         <div>
-                            <img className='px-3 py-4' src='/image/ProfileHome1.png'></img>
+                            <img className='px-3 py-4' src='/img/ProfileHome1.png'></img>
                         </div>
                         <div className='ml-4'>
                             <h1 className='font-medium text-lg'>Louis Tomlinson</h1>
                             <h2 className='mt-2'>Web developer - Freelance</h2>
                             <div className='flex items-center mt-2 w-4/5'>
                                 <div>
-                                    <img className='mr-3' src='/image/map.png'></img>
+                                    <img className='mr-3' src='/img/map.png'></img>
                                 </div>
                                 <h2>Lorem ipsum</h2>
                             </div>
@@ -64,20 +64,20 @@ const Homecomp = () => {
                             </div>
                         </div>
                     </div>
-                    <button className='rounded bg-violet-800 text-white px-4 py-3 mr-6 h-1/2 text-sm hover:bg-violet-600'>Lihat Profile</button>
+                    <button className='rounded bg-[#5E50A1] text-white px-4 py-3 mr-6 h-1/2 text-sm hover:bg-violet-600'>Lihat Profile</button>
                 </div>
                 <hr />
                 <div className='flex px-4 py-4 mt-4 mb-4 ml-2 mr-2 items-center justify-between'>
                     <div className='flex'>
                         <div>
-                            <img className='px-3 py-4' src='/image/ProfileHome2.png'></img>
+                            <img className='px-3 py-4' src='/img/ProfileHome2.png'></img>
                         </div>
                         <div className='ml-4'>
                             <h1 className='font-medium text-lg'>Harry Styles</h1>
                             <h2 className='mt-2'>Web developer - Freelance</h2>
                             <div className='flex items-center mt-2 w-4/5'>
                                 <div>
-                                    <img className='mr-3' src='/image/map.png'></img>
+                                    <img className='mr-3' src='/img/map.png'></img>
                                 </div>
                                 <h2>Lorem ipsum</h2>
                             </div>
@@ -88,20 +88,20 @@ const Homecomp = () => {
                             </div>
                         </div>
                     </div>
-                    <button className='rounded bg-violet-800 text-white px-4 py-3 mr-6 h-1/2 text-sm hover:bg-violet-600'>Lihat Profile</button>
+                    <button className='rounded bg-[#5E50A1] text-white px-4 py-3 mr-6 h-1/2 text-sm hover:bg-violet-600'>Lihat Profile</button>
                 </div>
                 <hr />
                 <div className='flex px-4 py-4 mt-4 mb-4 ml-2 mr-2 items-center justify-between'>
                     <div className='flex'>
                         <div>
-                            <img className='px-3 py-4' src='/image/ProfileHome3.png'></img>
+                            <img className='px-3 py-4' src='/img/ProfileHome3.png'></img>
                         </div>
                         <div className='ml-4'>
                             <h1 className='font-medium text-lg'>Niall Horan</h1>
                             <h2 className='mt-2'>Web developer - Freelance</h2>
                             <div className='flex items-center mt-2 w-4/5'>
                                 <div>
-                                    <img className='mr-3' src='/image/map.png'></img>
+                                    <img className='mr-3' src='/img/map.png'></img>
                                 </div>
                                 <h2>Lorem ipsum</h2>
                             </div>
@@ -112,20 +112,20 @@ const Homecomp = () => {
                             </div>
                         </div>
                     </div>
-                    <button className='rounded bg-violet-800 text-white px-4 py-3 mr-6 h-1/2 text-sm hover:bg-violet-600'>Lihat Profile</button>
+                    <button className='rounded bg-[#5E50A1] text-white px-4 py-3 mr-6 h-1/2 text-sm hover:bg-violet-600'>Lihat Profile</button>
                 </div>
                 <hr />
                 <div className='flex px-4 py-4 mt-4 mb-4 ml-2 mr-2 items-center justify-between'>
                     <div className='flex'>
                         <div>
-                            <img className='px-3 py-4' src='/image/ProfileHome4.png'></img>
+                            <img className='px-3 py-4' src='/img/ProfileHome4.png'></img>
                         </div>
                         <div className='ml-4'>
                             <h1 className='font-medium text-lg'>Liam Payne</h1>
                             <h2 className='mt-2'>Web developer - Freelance</h2>
                             <div className='flex items-center mt-2 w-4/5'>
                                 <div>
-                                    <img className='mr-3' src='/image/map.png'></img>
+                                    <img className='mr-3' src='/img/map.png'></img>
                                 </div>
                                 <h2>Lorem ipsum</h2>
                             </div>
@@ -136,18 +136,18 @@ const Homecomp = () => {
                             </div>
                         </div>
                     </div>
-                    <button className='rounded bg-violet-800 text-white px-4 py-3 mr-6 h-1/2 text-sm hover:bg-violet-600'>Lihat Profile</button>
+                    <button className='rounded bg-[#5E50A1] text-white px-4 py-3 mr-6 h-1/2 text-sm hover:bg-violet-600'>Lihat Profile</button>
                 </div>
             </div>
             <div className='mt-8 flex items-center'>
-                <button className='bg-white mr-1 ml-1 text-slate-400 px-4 py-3 rounded border border-gray-300 hover:bg-violet-800'><img src='/image/Left.png'></img></button>
+                <button className='bg-white mr-1 ml-1 text-slate-400 px-4 py-3 rounded border border-gray-300 hover:bg-violet-800'><img src='/img/Left.png'></img></button>
                 <button className='bg-white mr-1 ml-1 text-slate-400 px-4 py-2.5 rounded border border-gray-300 hover:bg-violet-800'>1</button>
                 <button className='bg-white mr-1 ml-1 text-slate-400 px-4 py-2.5 rounded border border-gray-300 hover:bg-violet-800'>2</button>
                 <button className='bg-white mr-1 ml-1 text-slate-400 px-4 py-2.5 rounded border border-gray-300 hover:bg-violet-800'>3</button>
                 <button className='bg-white mr-1 ml-1 text-slate-400 px-4 py-2.5 rounded border border-gray-300 hover:bg-violet-800'>4</button>
                 <button className='bg-white mr-1 ml-1 text-slate-400 px-4 py-2.5 rounded border border-gray-300 hover:bg-violet-800'>5</button>
                 <button className='bg-white mr-1 ml-1 text-slate-400 px-4 py-2.5 rounded border border-gray-300 hover:bg-violet-800'>6</button>
-                <button className='bg-white mr-1 ml-1 text-slate-400 px-4 py-3 rounded border border-gray-300 hover:bg-violet-800'><img src='/image/Right.png'></img></button>
+                <button className='bg-white mr-1 ml-1 text-slate-400 px-4 py-3 rounded border border-gray-300 hover:bg-violet-800'><img src='/img/Right.png'></img></button>
             </div>
         </div>
     )
