@@ -1,13 +1,12 @@
 import React from 'react'
-import Layout from '../../Component/Layout'
+import Profile from '../../Layout/Profile'
 
-const Profile = () => {
+
+
+const showProfile = () => {
   return (
-    <Layout>
-        <div>Profile</div>
-    </Layout>
-    
+    <Profile/>
   )
 }
 
-export default Profile
+export default showProfile
