@@ -3,7 +3,7 @@ const PengalamanKerja = () => {
     <div>
       <div className="flex m-4">
         <div className="my-5 w-24 mr-4 mt-6">
-          <img src="/img/suitcase.png" />
+          <img className="" src="/img/suitcase.png" />
         </div>
         <div>
           <div className="mt-4">
@@ -23,7 +23,7 @@ const PengalamanKerja = () => {
       </div>
       <div className="flex m-4">
         <div className="my-5 w-24 mr-4 mt-6">
-          <img src="/img/suitcase.png" />
+          <img className="" src="/img/suitcase.png" />
         </div>
         <div>
           <div className="mt-4">
