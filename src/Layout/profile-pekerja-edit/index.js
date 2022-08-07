@@ -6,26 +6,26 @@ const ProfilePekerjaLayout = () => {
     return (
         <>
             <main className="flex flex-col">
-                <div className="bg-[#5E50A1] w-full h-96 relative">
+                <div className="bg-[#5E50A1] md:w-auto h-96 relative">
                 </div>
-                <div className="flex mx-32 absolute mt-16">
-                    <div className="w-2/5 h-full  mr-10 rounded-lg bg-white ">
-                        <div className="flex flex-col px-1 py-2 rounded-2xl mb-5 shadow-2xl">
-                            <div className="flex flex-row justify-center mt-10">
+                <div className="lg:flex lg:mx-32 px-3 absolute mt-16">
+                    <div className="md:w-1/3 h-full  md:mr-8 rounded-lg bg-white ">
+                        <div className="md:flex flex-col md:px-1 py-1 rounded-2xl mb-5 shadow-2xl">
+                            <div className="flex justify-center mt-5">
                                 <div class="avatar">
-                                    <div class="w-52 rounded-full">
+                                    <div class="w-36 rounded-full">
                                         <img src="https://placeimg.com/192/192/people" />
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-row justify-center my-5">
-                                <img className="w-5 mr-3" src="/img/edit.svg" />
-                                <p className="text-2xl font-bold text-[#9EA0A5]">
+                            <div className="flex justify-center my-5">
+                                <img className="w-4 mr-3" src="/img/edit.svg" />
+                                <p className="text-xl font-bold text-[#9EA0A5]">
                                     EDIT
                                 </p>
                             </div>
-                            <div className="flex flex-col mx-16">
-                                <h1 className="text-2xl font-bold mb-5 mt-10">
+                            <div className="md:flex flex-col mx-10">
+                                <h1 className="text-xl font-bold mb-5 mt-7">
                                     LOUIS TOMLISON
                                 </h1>
                                 <p className="mb-1">
@@ -34,7 +34,7 @@ const ProfilePekerjaLayout = () => {
                                 <p className="mb-1 text-[#9EA0A5]">
                                     Freelancer
                                 </p>
-                                <div className="flex flex-row text-[#9EA0A5]">
+                                <div className="flex text-[#9EA0A5]">
                                     <img className="mr-3" src="/img/location.svg" />
                                     <p>
                                         Purwokerto, Jawa Tengah
@@ -51,11 +51,11 @@ const ProfilePekerjaLayout = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="">
-                            <button className="bg-[#5E50A1] p-4 w-full text-xl font-bold rounded-md mb-3 mt-5 text-white">
+                        <div className="flex flex-col">
+                            <button className="bg-[#5E50A1] border-2 border-[#5E50A1] px-4 py-4 md:w-auto text-xl font-bold rounded-md mb-3 mt-5 text-white">
                                 Ubah Password
                             </button>
-                            <button className="border-[#5E50A1] border-2 p-4 w-full text-xl font-bold rounded-md mb-3 mt-5 text-[#5E50A1]">
+                            <button className="border-[#5E50A1] border-2 px-4 py-4 md:w-auto text-xl font-bold rounded-md mb-3 mt-5 text-[#5E50A1]">
                                 Kembali
                             </button>
                         </div>
@@ -65,7 +65,7 @@ const ProfilePekerjaLayout = () => {
                     {/* </div> */}
 
 
-                    <div className="w-3/5 h-full flex flex-col mb-32">
+                    <div className="md:w-2/3 h-full flex flex-col mb-32">
                         <div className="bg-white rounded-lg shadow-2xl">
                             <div className="border-b-2">
                                 <h1 className="font-bold text-2xl py-4 ml-10">
@@ -136,62 +136,64 @@ const ProfilePekerjaLayout = () => {
                                              " type="text" placeholder="Masukkan domisili" />
                                     </div>
                                 </div>
-                                <div className="flex justify-between w-full mt-5">
-                                    <div className="flex flex-col">
-                                        <h1 className="mb-2">
-                                            Instagram :
-                                        </h1>
-                                        <input className="
-                                    placeholder:text-[12px]
-                                    text-sm
-                                    px-3
-                                    py-2
-                                    rounded-md
-                                    bg-white
-                                    text-black
-                                    border
-                                    border-[#9EA0A5]
-                                    focus:border-[#5E50A1] focus:ring-1 focus:ring-[#5E50A1]
-                                    focus:outline-none
-                                    " placeholder="Masukkan username IG" type="text" />
-                                    </div>
+                                <div className="">
+                                    <div className="lg:flex justify-between mt-7">
+                                        <div className="flex flex-col md:mr-5">
+                                            <h1 className="mb-2 mt-2">
+                                                Instagram :
+                                            </h1>
+                                            <input className="
+                                        placeholder:text-[12px]
+                                        text-sm
+                                        px-2
+                                        py-2
+                                        rounded-md
+                                        bg-white
+                                        text-black
+                                        border
+                                        border-[#9EA0A5]
+                                        focus:border-[#5E50A1] focus:ring-1 focus:ring-[#5E50A1]
+                                        focus:outline-none
+                                        " placeholder="Masukkan username IG" type="text" />
+                                        </div>
 
-                                    <div className="flex flex-col">
-                                        <h1 className="mb-2">
-                                            Github :
-                                        </h1>
-                                        <input className="
-                                    placeholder:text-[12px]
-                                    text-sm
-                                    px-3
-                                    py-2
-                                    rounded-md
-                                    bg-white
-                                    text-black
-                                    border
-                                    border-[#9EA0A5]
-                                    focus:border-[#5E50A1] focus:ring-1 focus:ring-[#5E50A1]
-                                    focus:outline-none
-                                    " placeholder="Masukkan username Github" type="text" />
-                                    </div>
+                                        <div className="flex flex-col md:mr-5">
+                                            <h1 className="mb-2 mt-2">
+                                                Github :
+                                            </h1>
+                                            <input className="
+                                        placeholder:text-[12px]
+                                        text-sm
+                                        px-2
+                                        py-2
+                                        rounded-md
+                                        bg-white
+                                        text-black
+                                        border
+                                        border-[#9EA0A5]
+                                        focus:border-[#5E50A1] focus:ring-1 focus:ring-[#5E50A1]
+                                        focus:outline-none
+                                        " placeholder="Masukkan username Github" type="text" />
+                                        </div>
 
-                                    <div className="flex flex-col">
-                                        <h1 className="mb-2">
-                                            Instagram :
-                                        </h1>
-                                        <input className="
-                                    placeholder:text-[12px]
-                                    text-sm
-                                    px-3
-                                    py-2
-                                    rounded-md
-                                    bg-white
-                                    text-black
-                                    border
-                                    border-[#9EA0A5]
-                                    focus:border-[#5E50A1] focus:ring-1 focus:ring-[#5E50A1]
-                                    focus:outline-none
-                                    " placeholder="Masukkan username Gitlab" type="text" />
+                                        <div className="flex flex-col md:mr-5">
+                                            <h1 className="mb-2 mt-2">
+                                                Instagram :
+                                            </h1>
+                                            <input className="
+                                            placeholder:text-[12px]
+                                            text-sm
+                                            px-2
+                                            py-2
+                                            rounded-md
+                                            bg-white
+                                            text-black
+                                            border
+                                            border-[#9EA0A5]
+                                            focus:border-[#5E50A1] focus:ring-1 focus:ring-[#5E50A1]
+                                            focus:outline-none
+                                            " placeholder="Masukkan username Gitlab" type="text" />
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="mt-7">
@@ -220,21 +222,26 @@ const ProfilePekerjaLayout = () => {
                                 </h1>
                             </div>
                             <div className="flex flex-col mx-10 m-3 text-[#9EA0A5] mt-10">
-                                <div className="flex flex-row justify-between">
+                                <div className="md:flex justify-between items-center">
                                     <input type='text' className="
-                                    p-2
-                                     w-full
-                                     bg-white
+                                    py-2
+                                    px-2
+                                    w-full
+                                    my-2.5
+                                    bg-white
                                      border-2
-                                     mr-10
+                                     md:mr-10
                                      rounded-md shadow-sm placeholder-slate-400
                                     focus:outline-none focus:border-[#5E50A1] focus:ring-1 focus:ring-[#5E50A1]
                                     "
                                         placeholder="Java"
                                     />
-                                    <button className="bg-[#FBB017] text-white px-5 py-2 rounded-md font-bold">
-                                        Simpan
-                                    </button>
+                                    <div className="">
+                                        <button className="bg-[#FBB017] text-white px-5 py-2 rounded-md font-bold">
+                                            Simpan
+                                        </button>
+                                    </div>
+
                                 </div>
                                 <div className="flex bg-[#FBB017]/60 border-[#FBB017] border-2 mt-10 mb-10 w-32 p-2 justify-between rounded-md">
                                     <p className="text-white font-bold">
@@ -255,8 +262,8 @@ const ProfilePekerjaLayout = () => {
                                 </h1>
                             </div>
                             <div className="flex flex-col mx-10 m-3 text-[#9EA0A5] mt-10">
-                                <div className="flex flex-row justify-between">
-                                    <div className="w-1/2 mr-10">
+                                <div className="md:flex flex-row justify-between">
+                                    <div className="md:w-1/2 md:mr-10">
                                         <p className="">
                                             Nama Perusahaan :
                                         </p>
@@ -274,7 +281,7 @@ const ProfilePekerjaLayout = () => {
                                         disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-400 disabled:shadow-none
                                         " type="text" placeholder="PT Apa aja" />
                                     </div>
-                                    <div className="w-1/2">
+                                    <div className="md:w-1/2">
                                         <p className="">
                                             Posisi :
                                         </p>
@@ -293,8 +300,8 @@ const ProfilePekerjaLayout = () => {
                                         " type="text" placeholder="Web developer" />
                                     </div>
                                 </div>
-                                <div className="flex flex-row justify-between mt-10">
-                                    <div className="w-1/2 mr-10">
+                                <div className="md:flex flex-row justify-between mt-10">
+                                    <div className="md:w-1/2 md:mr-10">
                                         <p className="">
                                             Tanggal Masuk :
                                         </p>
@@ -312,7 +319,7 @@ const ProfilePekerjaLayout = () => {
                                         disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-400 disabled:shadow-none
                                         " type="text" placeholder="DD-MM-YYYY" />
                                     </div>
-                                    <div className="w-1/2">
+                                    <div className="md:w-1/2">
                                         <p className="">
                                             Tanggal Keluar :
                                         </p>
@@ -405,17 +412,17 @@ const ProfilePekerjaLayout = () => {
                                         <div className="flex justify-center">
                                             <img className="flex justify-center" src="/img/cloud.svg" />
                                         </div>
-                                        <p className="text-center">
+                                        <p className="text-center text-sm">
                                             Drag & Drop untuk Upload Gambar Aplikasi Mobile
                                         </p>
-                                        <p className="text-center text-sm mb-5">
+                                        <p className="text-center text-xs mb-5">
                                             Atau cari untuk mengupload file dari direktorimu.
                                         </p>
-                                        <div className="flex flex-row justify-center mb-10 mt-10">
-                                            <div className="flex mr-10 items-center">
+                                        <div className="md:flex flex-row justify-center mb-10 mt-10 px-10 ">
+                                            <div className="flex mr-10 items-center mb-5">
                                                 <img className="w-9 mr-3" src="/img/photo.svg" />
-                                                <div className="flex flex-col text-sm">
-                                                    <p className="text-sm">
+                                                <div className="flex flex-col text-xs">
+                                                    <p className="text-xs">
                                                         High-Res Image
                                                     </p>
                                                     <p>
@@ -425,7 +432,7 @@ const ProfilePekerjaLayout = () => {
                                             </div>
                                             <div className="flex items-center">
                                                 <img className="w-9 mr-3" src="/img/size.svg" />
-                                                <div className="flex flex-col text-sm">
+                                                <div className="flex flex-col text-xs">
                                                     <p>
                                                         Size
                                                     </p>
