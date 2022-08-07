@@ -9,10 +9,11 @@ import { FiMapPin } from 'react-icons/fi'
 const Profile = () => {
   return (
     <Layout>
-    <div className="font-sans bg-violet-700 h-48"></div>
-        <div className="-mt-24"> 
+    <div className="bg-slate-300 pt-12 py-32 ">
+    <div className="font-sans bg-violet-700 h-48 w-11/12 mx-auto md:w-3/5 rounded-2xl"></div>
+        <div className="-mt-24 bg-white mx-auto rounded-b-2xl w-11/12 md:w-3/5"> 
           <div className="flex flex-col items-center p-4">
-            <img src="img/companyProfile.png"/>
+            <img className="my-4" src="img/companyProfile.png"/>
             <h1 className="mt-4 text-2xl font-semibold">PT. Martabat Jaya Abadi</h1>
             <p className="mt-2 text-sm">Financial</p>
               <div className="text-center text-sm w-3/6 mt-2 text-slate-600">
@@ -27,6 +28,7 @@ const Profile = () => {
                   <p className="flex items-center text-sm my-4"><span className="mr-2 mt-1"><AiFillLinkedin/></span>Martabat Jaya Abadi</p>
                 </div>
           </div>
+        </div>
         </div>
         </Layout>
   )

@@ -18,8 +18,8 @@ const CompanyProfile = () => {
     <Layout>
     <div className="bg-slate-100 pb-16">
       <div className="bg-violet-700 h-80 w-full"></div>
-        <div className="my-5 flex w-5/6 mx-auto -mt-64">
-          <div className="bg-white rounded-xl p-6 w-1/3 border-2 mr-10 justify-around">
+        <div className="flex my-5 md:flex-row w-5/6 mx-auto -mt-64 flex-col">
+          <div className="bg-white rounded-xl p-6 md:w-1/3 mb-10 w-full border-2 mr-10 justify-around">
             <div>
               <img className="mx-auto" src="/img/companyProfile.png"/>
             </div>
@@ -36,7 +36,7 @@ const CompanyProfile = () => {
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.
               </p>
             </div>
-            <button className="bg-violet-700 hover:opacity-90 transition p-2 my-6 rounded-md w-11/12 text-white font-semibold">Hire</button>
+            <button className="bg-violet-700 hover:opacity-90 transition p-2 my-6 rounded-md w-full text-white font-semibold">Hire</button>
             <div>
               <div className="text-lg font-semibold">
                 <p>Skill</p>

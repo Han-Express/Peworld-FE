@@ -61,7 +61,7 @@ const HirePage = () => {
                 <label className="text-slate-600" for="comment">Pesan :</label>
                 <textarea className="w-full border-[1px] rounded-md h-4/6 border-violet-700 p-2 mt-3" name="comment" placeholder="tinggalkan pesan disini"></textarea>
                 <br/>
-                <input className=" bg-violet-700 p-2 w-full mx-auto mt-4 rounded-lg hover:cursor-pointer text-white" type="submit" value="Kirim" />
+                <input className=" bg-violet-700 px-2 py-1 w-full mx-auto mt-4 rounded-lg hover:cursor-pointer text-white" type="submit" value="Kirim" />
               </form>
             </div>
           </div>
