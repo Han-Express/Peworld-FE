@@ -19,6 +19,17 @@ a {
   box-sizing: border-box;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+
 @media (prefers-color-scheme: light) {
   html {
     color-scheme: dark;
