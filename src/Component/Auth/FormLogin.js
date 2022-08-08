@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 import Swal from 'sweetalert2'
 
 const LoginComp = () => {
-  const { data, error, loading, isLogin } = useSelector((state) => state.auth)
+  const { data, error, loading, isLogin} = useSelector((state) => state.auth)
   console.log(data, 'cek data di login')
   const dispatch = useDispatch()
   const router = useRouter()
@@ -22,14 +22,22 @@ const LoginComp = () => {
   }
 
   useEffect(() => {
-    if (isLogin === true) {
+    if (isLogin === true && data?.role === 'employee' ) {
+      Swal.fire({
+        icon: 'success',
+        title: '',
+        text: 'Login Success',
+      })
+      router.push('/profile')
+    } else if (isLogin === true && data?.role === 'recruiter') {
       Swal.fire({
         icon: 'success',
         title: '',
         text: 'Login Success',
       })
       router.push('/home')
-    } else {
+    }
+    else {
       router.push('/auth/login')
     }
   }, [isLogin])

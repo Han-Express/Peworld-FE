@@ -1,7 +1,8 @@
 const initialState = {
     loading: false,
     data: {},
-    isLogin: false
+    isLogin: false,
+
 }
 
 const Fetch = (state=initialState, action={}) => {
