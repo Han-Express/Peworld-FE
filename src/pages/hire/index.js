@@ -1,12 +1,11 @@
 import React from 'react'
-import Layout from '../../Component/Layout'
+import HirePage from '../../Layout/Hire'
 
 const Hire = () => {
   return (
-    <Layout>
-        <div>Hire</div>
-    </Layout>
-    
+    <>
+    <HirePage/>
+    </>
   )
 }
 
