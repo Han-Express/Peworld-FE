@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const ConfirmPassComp = () => {
   return (
-    <div className='bg-[#E5E5E5] w-3/5 px-32 py-24'>
+    <div className='bg-[#E5E5E5] w-full h-screen md:w-3/5 px-32 py-24'>
       <div className='text-3xl font-semibold'>Reset password</div>
       <div className='py-5'>You need to change your password to activate your account</div>
       <form>
