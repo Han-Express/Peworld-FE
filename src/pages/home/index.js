@@ -1,13 +1,12 @@
 import React from 'react'
-import Layout from '../../Component/Layout'
+import Home from "../../Layout/Home"
 
-const Sort = () => {
-  return (
-    <Layout>
-      <div>Sort</div>
-    </Layout>
-    
+const Homepage = () => {
+  return ( 
+    <>
+    <Home/>
+    </>   
   )
 }
 
-export default Sort
+export default Homepage

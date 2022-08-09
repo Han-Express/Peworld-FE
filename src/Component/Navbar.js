@@ -1,13 +1,19 @@
 import React from 'react'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useRouter } from 'next/router'
+import { Logout } from '../redux/action/auth'
+import Swal from 'sweetalert2'
 
 const Navbar = () => {
-  const userId = true;
-  const role = 'employee'
+  const {data, error, isLogin} = useSelector((state) => state.auth)
+  const dispatch = useDispatch()  
+  const router = useRouter()
+
   return (
-    <>
-    
-      {userId ? <nav className="md:px-24 bg-white ">
+    <> 
+      {isLogin ? <nav className="md:px-24 bg-white ">
         <div className="flex flex-row justify-between navbar items-center">
           <div className='flex flex-row'>
             <img className='w-32 h-32' src='/img/logo.svg' />
@@ -45,7 +51,7 @@ const Navbar = () => {
                 </div>
               </label>
               <ul tabindex="0" className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-                <Link href={role==='employee'?'/profile':'/profile/comp-profile'}>
+                <Link href={data?.role==='employee'?'/profile':'/profile/comp-profile'}>
                   <li>
                     <a className="justify-between">
                       Profile
@@ -54,7 +60,15 @@ const Navbar = () => {
                   </li>
                 </Link>
                 <li><a>Settings</a></li>
-                <li><a>Logout</a></li>
+                <li onClick={() => {
+                  dispatch(Logout())
+                  Swal.fire({
+                    icon: 'success',
+                    title: '',
+                    text: 'Logout Success',
+                  })
+                  router.push('/')
+                }} ><a>Logout</a></li>
               </ul>
             </div>
           </div>
@@ -70,7 +84,7 @@ const Navbar = () => {
                 MASUK
               </button>
             </Link>
-            <Link href="/auth/register">
+            <Link href="/auth/option">
               <button className='border-2 ml-1 bg-[#5E50A1] border-[#5E50A1] text-white text-xs rounded-md px-3 py-2'>
                 DAFTAR
               </button>

@@ -6,9 +6,9 @@ import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 
 const persistConfig = {
-          key: 'root',
-          storage,
-          whitelist: ["auth"]
+  key: 'root',
+  storage,
+  whitelist: ["auth"]
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
@@ -17,6 +17,6 @@ let store = createStore(persistedReducer, applyMiddleware(thunk, logger))
 let persistor = persistStore(store)
 
 export {
-          store,
-          persistor
+  store,
+  persistor
 }

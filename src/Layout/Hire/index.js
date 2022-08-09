@@ -1,25 +1,16 @@
-import React, { useState } from "react";
-import Layout from "../../Component/Layout";
-import { HiOutlineMail } from 'react-icons/hi'
-import {TiSocialInstagram} from 'react-icons/ti'
-import { AiFillGithub, AiFillGitlab } from "react-icons/ai";
-import Portfolio from "./Portfolio";
-import PengalamanKerja from "./PengalamanKerja";
-import { useRouter } from "next/router";
+import Layout from "../../Component/Layout"
 
-const CompanyProfile = () => {
-  // const router = useRouter();
-  // const handleClick = (e) => {
-  //   router.push(`/comp-profile?page=${e.target.value}`);
-  // }
-  const [page, setPage] = useState("")
+
+
+const HirePage = () => {
   return(
     <>
     <Layout>
+    <div>
     <div className="bg-slate-100 pb-16">
-      <div className="bg-violet-700 h-80 w-full"></div>
-        <div className="flex my-5 md:flex-row w-5/6 mx-auto -mt-64 flex-col">
-          <div className="bg-white rounded-xl p-6 md:w-1/3 mb-10 w-full border-2 mr-10 justify-around">
+      <div className="bg-violet-700 h-80 md:w-full mx-auto rounded-xl w-11/12"></div>
+        <div className="my-5 flex-row md:flex md:w-4/6 w-11/12 mx-auto -mt-64">
+          <div className="bg-white md:w-4/6 p-6 w-full mr-10 justify-around md:rounded-xl">
             <div>
               <img className="mx-auto" src="/img/companyProfile.png"/>
             </div>
@@ -53,31 +44,34 @@ const CompanyProfile = () => {
                 <p className="text-xs py-2 px-5 mr-4 mt-3 rounded-xl text-white font-semibold bg-[#FBB017]/60 border-2 border-yellow-700">Swift</p>
               </div>
             </div>
-            <div className="text-sm text-slate-900 mt-10">
-                    <p className="flex items-center my-4"><span className="mr-2 mt-1"><HiOutlineMail/></span>Louistommo@gmail.com</p>
-                    <p className="flex items-center my-4"><span className="mr-2 mt-1"><TiSocialInstagram/></span>@Louist91</p>
-                    <p className="flex items-center my-4"><span className="mr-2 mt-1"><AiFillGithub/></span>@Louistommo</p>
-                    <p className="flex items-center my-4"><span className="mr-2 mt-1"><AiFillGitlab/></span>@Louistommo91</p>
-                  </div>
           </div>
-        <div className="bg-white rounded-xl p-5 w-full h-fit">
-          <div className="px-2 py-2">
-            <div>
-              <button className={`hover:underline font-semibold focus:underline focus:text-violet-700 mr-5 underline-offset-8 ${page === 'Portfolio' ? 'underline text-violet-700' : 'text-slate-700'}`}  onClick={(e) => setPage(e.target.value)} value={'Portfolio'}>
-                Portfolio
-              </button>
-              <button className={`hover:underline  font-semibold focus:underline focus:text-violet-700 underline-offset-8 ${page === 'PengalamanKerja' ? 'underline text-violet-700' : 'text-slate-700'}`} onClick={(e) => setPage(e.target.value)} value={'PengalamanKerja'}>
-                Pengalaman Kerja
-              </button>
+        <div className="flex flex-col bg-white rounded-xl p-5 w-full h-[80vh] md:mt-0 mt-10">
+          <div className="p-1">
+            <h1 className="text-2xl font-semibold mb-4">Hubungi Lous Tomlinson</h1>
+            <p className="text-sm font-normal mb-8 text-slate-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod ipsum et dui rhoncus auctor.</p>
+            <div className="flex flex-col text-sm">
+              <form action="#">
+                <label className="text-slate-600" for="category">Tujuan tentang pesan ini : </label>
+                <br/>
+                <select name="category" for="category" className="flex flex-col mb-3 w-full p-2 mt-3 bg-white border-[1px] rounded-md focus:border-violet-700" >
+                  <option value="web">Project</option>
+                  <option value="marketing">Example</option>
+                  <option value="design">Example</option>
+                </select>
+                <label className="text-slate-600" for="comment">Pesan :</label>
+                <textarea className="w-full border-[1px] rounded-md h-4/6 border-violet-700 p-2 mt-3" name="comment" placeholder="tinggalkan pesan disini"></textarea>
+                <br/>
+                <input className=" bg-violet-700 px-2 py-1 w-full mx-auto mt-4 rounded-lg hover:cursor-pointer text-white" type="submit" value="Kirim" />
+              </form>
             </div>
           </div>
-          {page === "Portfolio" ? <Portfolio/> : <PengalamanKerja/>}
         </div>
       </div>
+    </div>
     </div>
     </Layout>
     </>
   )
 }
 
-export default CompanyProfile;
+export default HirePage
