@@ -2,7 +2,7 @@ import Layout from "../../Component/Layout"
 
 
 
-const HirePage = () => {
+const HirePage = ({employees, skill}) => {
   return(
     <>
     <Layout>
@@ -14,17 +14,18 @@ const HirePage = () => {
             <div>
               <img className="mx-auto" src="/img/companyProfile.png"/>
             </div>
-              <h1 className="mt-5 text-lg font-semibold">Louis Tomlison</h1>
+              <h1 className="mt-5 text-lg font-semibold">{employees[0].name}</h1>
             <div className="text-sm my-4">
-              <p>Web Developer</p>
-              <p className="text-slate-600 mt-2">Freelancer</p>
+              <p>{employees[0].job}</p>
+              <p className="text-slate-600 mt-2">{employees[0].job_status}</p>
             </div>
             <div className="text-sm text-slate-600 mt-3 leading-6">
-              <p>Purwokerto, Jawa Tengah</p>
+              <p>{employees[0].domicile}</p>
               <p>0812-3456-789</p>
             </div>
             <div className="text-sm text-slate-600 mt-2">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.
+              <p>
+                {employees[0].description}
               </p>
             </div>
             <button className="bg-violet-700 hover:opacity-90 transition p-2 my-6 rounded-md w-full text-white font-semibold">Hire</button>
@@ -33,15 +34,11 @@ const HirePage = () => {
                 <p>Skill</p>
               </div>
               <div className="flex flex-wrap">
-                <p className="text-xs py-2 px-5 mr-4 mt-3 rounded-xl text-white font-semibold bg-[#FBB017]/60 border-2 border-yellow-700">Phyton</p>
-                <p className="text-xs py-2 px-5 mr-4 mt-3 rounded-xl text-white font-semibold bg-[#FBB017]/60 border-2 border-yellow-700">Laravel</p>
-                <p className="text-xs py-2 px-5 mr-4 mt-3 rounded-xl text-white font-semibold bg-[#FBB017]/60 border-2 border-yellow-700">Golang</p>
-                <p className="text-xs py-2 px-5 mr-4 mt-3 rounded-xl text-white font-semibold bg-[#FBB017]/60 border-2 border-yellow-700">Javascript</p>
-                <p className="text-xs py-2 px-5 mr-4 mt-3 rounded-xl text-white font-semibold bg-[#FBB017]/60 border-2 border-yellow-700">PHP</p>
-                <p className="text-xs py-2 px-5 mr-4 mt-3 rounded-xl text-white font-semibold bg-[#FBB017]/60 border-2 border-yellow-700">HTML</p>
-                <p className="text-xs py-2 px-5 mr-4 mt-3 rounded-xl text-white font-semibold bg-[#FBB017]/60 border-2 border-yellow-700">C++</p>
-                <p className="text-xs py-2 px-5 mr-4 mt-3 rounded-xl text-white font-semibold bg-[#FBB017]/60 border-2 border-yellow-700">Kotlin</p>
-                <p className="text-xs py-2 px-5 mr-4 mt-3 rounded-xl text-white font-semibold bg-[#FBB017]/60 border-2 border-yellow-700">Swift</p>
+                {skill.map((item)=> {
+                  return(
+                    <p className="text-xs py-2 px-5 mr-4 mt-3 rounded-xl text-white font-semibold bg-[#FBB017]/60 border-2 border-yellow-700" key={item.skill_id}>{item.skill}</p>
+                  )
+                })}
               </div>
             </div>
           </div>
