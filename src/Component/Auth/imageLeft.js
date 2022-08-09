@@ -2,7 +2,7 @@ import React from 'react'
 
 const ImageLeft = () => {
   return (
-    <div className='w-2/5 h-screen'>
+    <div className='hidden w-2/5 md:flex h-screen'>
       <div className='absolute mx-3'><img className='h-screen' src='/img/imageAuth.png' /></div>
       <div className='absolute w-2/5 h-screen bg-[#5E50A1] opacity-70'>
       </div>

@@ -4,7 +4,7 @@ import Link from 'next/link'
 const OptionComp = () => {
   return (
     <div className='bg-[#E5E5E5] w-screen h-screen flex flex-col items-center justify-center'>
-      <div className='w-1/5'>
+      <div className='w-2/5 md:w-1/5'>
         <div className='flex items-center mb-5 justify-center rounded bg-[#5E50A1]'>
           <img src='/img/logo.png'></img>
           <h2 className='text-white ml-4 py-3'>Peworld</h2>
