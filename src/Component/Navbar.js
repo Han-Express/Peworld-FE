@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useRouter } from 'next/router'
 import { Logout } from '../redux/action/auth'
