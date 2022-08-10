@@ -45,30 +45,75 @@ const DataDiri = () => {
                                             focus:outline-none focus:border-[#5E50A1] focus:ring-1 focus:ring-[#5E50A1]
                                            disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-400 disabled:shadow-none
                         
-                                             " type="text" placeholder="Masukan nama lengkap" />
+                                            " type="text" placeholder="Masukan nama lengkap" />
                             </div>
                         </div>
-                        <div className="mt-5">
-                            <div className="flex flex-col">
+                        <div className="mt-5 sm:flex justify-between">
+                            <div className="flex flex-col sm:w-1/2">
                                 <p className="mb-3 font-bold text-base">
                                     Job desk :
                                 </p>
                                 <input className="
-                                         text-black
-                                            border-b-2
-                                            mt-3 
-                                            block 
-                                            w-full 
-                                            px-2 py-2 
-                                            bg-white 
-                                            border-[#9EA0A5]
-                                            rounded-sm shadow-sm placeholder-slate-400
-                                            focus:outline-none focus:border-[#5E50A1] focus:ring-1 focus:ring-[#5E50A1]
-                                           disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-400 disabled:shadow-none
+                                text-black
+                                 border-b-2
+                                 mt-3 
+                                 block 
+                                 w-full 
+                                 px-2 py-2 
+                                 bg-white 
+                                 border-[#9EA0A5]
+                                 rounded-sm shadow-sm placeholder-slate-400
+                                 focus:outline-none focus:border-[#5E50A1] focus:ring-1 focus:ring-[#5E50A1]
+                                 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-400 disabled:shadow-none
                         
-                                             " type="text" placeholder="Masukkan job desk" />
+                                " type="text" placeholder="Masukkan job desk" />
+                            </div>
+                            <div className="flex flex-col sm:w-1/2 mt-1 sm:ml-3">
+                                <p className="mb-3 font-bold text-base">
+                                    Job Status :
+                                </p>
+                                <select name="jobStatus" id="jobStatus" className="
+                                text-black
+                                border-2
+                                mt-2
+                                block 
+                                w-full 
+                                px-2 py-2.5 
+                                bg-white 
+                                border-[#9EA0A5]
+                                rounded-md shadow-sm placeholder-slate-400
+                                focus:outline-none focus:border-[#5E50A1] focus:ring-1 focus:ring-[#5E50A1]
+                                disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-400 disabled:shadow-none
+                                ">
+                                    <option value="fulltime" className="text-center py-2 px-2">fulltime</option>
+                                    <option value="freelancer" className="text-center py-2 px-2">freelancer</option>
+                                </select>
+
                             </div>
                         </div>
+                        {/* <div className="mt-5">
+                            <div className="flex flex-col">
+                                <p className="mb-3 font-bold text-base">
+                                    Job Status :
+                                </p>
+                                <select name="cars" id="cars" className="
+                                text-base
+                                text-black
+                                px-2 
+                                py-2 
+                                border-b-2
+                                border-[#9EA0A5]
+                                rounded-sm shadow-sm placeholder-slate-400
+                                focus:outline-none focus:border-[#5E50A1] focus:ring-1 focus:ring-[#5E50A1]
+                                disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-400 disabled:shadow-none
+                        
+                                ">
+                                    <option value="fulltime" className="text-center py-2 px-2">fulltime</option>
+                                    <option value="freelancer" className="text-center py-2 px-2">freelancer</option>
+                                </select>
+
+                            </div>
+                        </div> */}
                         <div className="mt-5">
                             <div className="flex flex-col">
                                 <p className="mb-3 font-bold text-base">

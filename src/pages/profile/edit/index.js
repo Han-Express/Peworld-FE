@@ -4,9 +4,14 @@ import ProfilePekerjaLayout from '../../../Layout/profile-pekerja-edit'
 
 const edit = () => {
   return (
-    <Layout>
-         <ProfilePekerjaLayout />
-    </Layout>
+    <>
+
+      {/* <main className='flex flex-col'> */}
+        <Layout>
+          <ProfilePekerjaLayout />
+        </Layout>
+      {/* </main> */}
+    </>
   )
 }
 

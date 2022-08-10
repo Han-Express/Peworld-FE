@@ -1,3 +1,4 @@
+import Layout from "../../Component/Layout"
 import LayoutCompany from "./component/LayoutCompany"
 
 
@@ -5,7 +6,7 @@ import LayoutCompany from "./component/LayoutCompany"
 
 const ProfilePerusahaanLayout = () => {
     return (
-        <>     
+        <>   
            <LayoutCompany />
         </>
     )

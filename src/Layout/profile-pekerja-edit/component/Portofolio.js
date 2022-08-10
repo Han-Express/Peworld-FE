@@ -4,7 +4,7 @@ const Portofolio =()=>{
      return(
           <>
           {/* portofolio */}
-          <div className="bg-white mt-10 rounded-lg shadow-xl">
+          <div className="bg-white mt-10 rounded-lg shadow-xl mb-14">
                             <div className="border-b-2">
                                 <h1 className="font-bold text-2xl py-4 ml-10">
                                     Portofolio
@@ -53,7 +53,7 @@ const Portofolio =()=>{
                                 <form action="" className="flex flex-col">
                                     <input type="file" multiple />
                                     {/* <input className="w-full h-96 border-4 border-dashed bg-white border-gray-400 relative" type="file" /> */}
-                                    <div className="flex-col border-8 border-dashed mt-10 py-10 border-gray-400">
+                                    <div className="flex-col border-8 border-dashed mt-10 py-10 border-gray-400 px-4">
                                         <div className="flex justify-center">
                                             <img className="flex justify-center" src="/img/cloud.svg" />
                                         </div>
@@ -91,8 +91,8 @@ const Portofolio =()=>{
                                     {/* </input> */}
                                 </form>
 
-                                <div className="border-y-2 mt-10 mb-32">
-                                    <button className="border-2 text-[#FBB017] text-lg font-bold border-[#FBB017] w-full p-2 my-10 rounded-sm ">
+                                <div className="border-y-2 mt-10 sm:mb-32">
+                                    <button className="border-2 text-[#FBB017] text-lg font-bold border-[#FBB017] w-full p-2 my-10 rounded-sm">
                                         Tambah portofolio
                                     </button>
                                 </div>

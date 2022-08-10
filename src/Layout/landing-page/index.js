@@ -205,42 +205,14 @@ const LandingPageLayout = () => {
 
                                     </div>
                                 </div>
-
-
-                                {/* <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"> */}
-                                    {/* <a href="#slide4" className="btn btn-circle">❮</a>
-                                    <a href="#slide2" className="btn btn-circle">❯</a> */}
-                                {/* </div> */}
                             </div>
-                            {/* <div id="slide2" className="carousel-item relative w-full">
-                                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                    <a href="#slide1" className="btn btn-circle">❮</a>
-                                    <a href="#slide3" className="btn btn-circle">❯</a>
-                                </div>
-                            </div> */}
-                            {/* <div id="slide3" className="carousel-item relative w-full">
-                                
-                                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                    <a href="#slide2" className="btn btn-circle">❮</a>
-                                    <a href="#slide4" className="btn btn-circle">❯</a>
-                                </div>
-                            </div> */}
-                            {/* <div id="slide4" className="carousel-item relative w-full">
-                                
-                                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                    <a href="#slide3" className="btn btn-circle">❮</a>
-                                    <a href="#slide1" className="btn btn-circle">❯</a>
-                                </div>
-                            </div> */}
-
                         </div>
-
                     </div>
                 </div>
 
             </div>
 
-            <div className="flex justify-between bg-[#5E50A1] md:mx-32 mx-5 h-40 px-10 items-center mb-10">
+            <div className="flex justify-between border-[#5E50A1] bg-[#5E50A1] md:mx-32 mx-5 h-40 px-10 items-center mb-10">
                 <div className="w-48">
                     <p className="md:text-3xl text-xl text-white">
                         Lorem ipsum dolor sit amet

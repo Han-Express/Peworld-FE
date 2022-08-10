@@ -37,8 +37,6 @@ const Navbar = () => {
                 </div>
               </ul>
             </div>
-
-
             <Link href="/chat">
               <a>
                 <img className="mr-3 md:mr-8 w-6 h-6" src='/img/chat.svg' />
@@ -76,7 +74,7 @@ const Navbar = () => {
       </nav> : <nav className="md:px-24 bg-white">
         <div className="flex flex-row justify-between items-center navbar">
           <div className='flex flex-row'>
-            <img className='w-32 h-32' src='/img/logo.svg' />
+            <img className='' src='/img/logo.svg' />
           </div>
           <div>
             <Link href="/auth/login">
