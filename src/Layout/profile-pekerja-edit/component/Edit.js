@@ -1,6 +1,7 @@
 
 
-const Edit = () => {
+
+const Edit = ({employees}) => {
     return (
         <>
             <div className="md:w-1/3 h-full  md:mr-8 rounded-lg bg-white ">
@@ -8,7 +9,7 @@ const Edit = () => {
                     <div className="flex justify-center mt-5">
                         <div class="avatar">
                             <div class="w-36 rounded-full">
-                                <img src="https://placeimg.com/192/192/people" />
+                                <img src={`http://localhost:5000/static/${employees[0].image}`} />
                             </div>
                         </div>
                     </div>
@@ -19,30 +20,21 @@ const Edit = () => {
                         </p>
                     </div>
                     <div className="md:flex flex-col mx-10">
-                        <h1 className="text-xl font-bold mb-5 mt-7">
-                            LOUIS TOMLISON
-                        </h1>
-                        <p className="mb-1">
-                            Web Developer
-                        </p>
-                        <p className="mb-1 text-[#9EA0A5]">
-                            Freelancer
-                        </p>
+                        <h1 className="text-xl font-bold mb-5 mt-7">{employees[0].name}</h1>
+                        <p className="mb-1">{employees[0].email}</p>
+                        <p className="mb-1">{employees[0].job}</p>
+                        <p className="mb-1 text-[#9EA0A5]">{employees[0].job_status}</p>
                         <div className="flex text-[#9EA0A5]">
                             <img className="mr-3" src="/img/location.svg" />
-                            <p>
-                                Purwokerto, Jawa Tengah
-                            </p>
+                            <p>{employees[0].domicile}</p>
                         </div>
                         <div className="flex flex-row text-[#9EA0A5]">
                             <img className="mr-3" src="/img/phone.svg" />
                             <p>
-                                0812 - 3456 - 789
+                                {employees[0].phone_number}
                             </p>
                         </div>
-                        <p className="text-justify text-[#9EA0A5] mt-4 mb-7">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.
-                        </p>
+                        <p className="text-justify text-[#9EA0A5] mt-4 mb-7">{employees[0].description}</p>
                     </div>
                 </div>
                 <div className="flex flex-col">

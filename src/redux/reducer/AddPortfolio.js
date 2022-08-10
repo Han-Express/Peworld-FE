@@ -1,21 +1,21 @@
 const initialstate = {
   loading: false,
-  employee: null,
+  data: null
 };
 
-export const employeeReducer = (state = initialstate, action) => {
+export const portfolioReducer = (state = initialstate, action) => {
   switch (action.type) {
-    case "Request_Update_Employee":
+    case "Request_Update_Portfolio":
       return {
         ...state,
         loading: true,
       };
-    case "Update_Employee_Success":
+    case "Update_Portfolio_Success":
       return {
         ...state,
-        employee: action.payload,
+        data: action.payload,
       };
-    case "Update_Employee_Failed":
+    case "Update_Portfolio_Failed":
       return {
         ...state,
         error: action.payload,

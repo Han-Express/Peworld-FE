@@ -21,7 +21,7 @@ const HirePage = ({employees, skill}) => {
             </div>
             <div className="text-sm text-slate-600 mt-3 leading-6">
               <p>{employees[0].domicile}</p>
-              <p>0812-3456-789</p>
+              <p>{employees[0].phone_number}</p>
             </div>
             <div className="text-sm text-slate-600 mt-2">
               <p>
