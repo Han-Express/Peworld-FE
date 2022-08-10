@@ -23,9 +23,10 @@ const Portofolio = () => {
       const handleAdd = (e) => {
         e.preventDefault();
         console.log(formData)
-        dispatch(AddPortfolio(formData));
+        dispatch(AddPortfolio(formData, auth.userId, auth.token));
         // tambah kondisi loading, data, error
       }
+      const {data:auth} = useSelector(state=>state.auth)
       useEffect(()=> {
         console.log(data, "xixi")
         if (data) {
@@ -33,7 +34,7 @@ const Portofolio = () => {
             icon: "success",
             text: "Data Successfully Updated",
           });
-            router.replace("/profile/edit");
+            router.replace(`/profile/edit/${auth.userId}`);
         } else if (error) {
           Swal.fire({
             icon: "error",

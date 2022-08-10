@@ -21,21 +21,21 @@ export const AddPortfolioFailed = (payload) => {
   };
 };
 
-export const AddPortfolio = (formData) => {
+export const AddPortfolio = (formData, userId, token) => {
   console.log(formData, "test")
   return (dispatch) => {   
     dispatch(AddPortfolioRequest());
     axios({
       method: "POST",
-      url: "http://localhost:5000/api/v1/portfolio",
+      url: "https://coral-app-3yjfb.ondigitalocean.app/api/v1/portfolio",
       data: {
         name: formData.name,
         link: formData.link,
         image: formData.image,
-        user_id: 12,
+        user_id: userId,
       },
       headers: { 
-        authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyLCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE2NjAxMzEzMzAsImV4cCI6MTY2MDIxNzczMH0.MSu-8tIJnGJWlFkkCEap35yP9Yth5BnTuK5sgY4-AWU"
+        authorization: token
        }
     })
       .then((res) => {

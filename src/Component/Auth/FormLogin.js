@@ -28,7 +28,7 @@ const LoginComp = () => {
         title: '',
         text: 'Login Success',
       })
-      router.push('/profile')
+      router.push(`/profile/${data.userId}`)
     } else if (isLogin === true && data?.role === 'recruiter') {
       Swal.fire({
         icon: 'success',

@@ -8,6 +8,7 @@ const DataDiri = ({employees}) => {
   const { loading, employee, error} = useSelector(
     (state) => state.employee
   );
+  const {data} = useSelector(state=>state.auth)
   const router = useRouter()
   const dispatch = useDispatch();
   const [updateData, setUpdateData] = useState({
@@ -23,7 +24,7 @@ const DataDiri = ({employees}) => {
   });
   const handleUpdate = (e) => {
     e.preventDefault();
-    dispatch(UpdateEmployee(updateData));
+    dispatch(UpdateEmployee(updateData, data.userId, data.token));
     // tambah kondisi loading, data, error
     
   }
@@ -34,7 +35,7 @@ const DataDiri = ({employees}) => {
         icon: "success",
         text: "Data Successfully Updated",
       });
-        router.replace("/profile/edit");
+        router.replace(`/profile/edit/${data.userId}`);
     } else if (error) {
       Swal.fire({
         icon: "error",

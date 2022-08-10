@@ -4,10 +4,10 @@ import LayoutCompany from "./component/LayoutCompany"
 
 
 
-const ProfilePerusahaanLayout = () => {
+const ProfilePerusahaanLayout = ({company}) => {
     return (
         <>   
-           <LayoutCompany />
+           <LayoutCompany company={company} />
         </>
     )
 

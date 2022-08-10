@@ -7,7 +7,7 @@ const Portfolio = ({portfolio}) => {
       {portfolio.map((item)=> {
         return(
           <div className="h-[150px] overflow-hidden flex flex-col items-center">
-            <img className="w-[200px] mx-auto" src={`http://localhost:5000/static/${item.image}`} />
+            <img className="w-[200px] mx-auto" src={`https://coral-app-3yjfb.ondigitalocean.app/static/${item.image}`} />
             <p className="">{item.link}</p>
           </div>
         )

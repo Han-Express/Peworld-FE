@@ -4,6 +4,7 @@ const initialstate = {
 };
 
 export const skillReducer = (state = initialstate, action) => {
+  console.log(action.payload)
   switch (action.type) {
     case "Request_Add_Skill":
       return {
