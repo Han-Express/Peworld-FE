@@ -16,7 +16,7 @@ const Navbar = () => {
       {isLogin ? <nav className="md:px-24 bg-white ">
         <div className="flex flex-row justify-between navbar items-center">
           <div className='flex flex-row'>
-            <img className='w-32 h-32' src='/img/logo.svg' />
+            <img className='' src='/img/logo.svg' />
           </div>
           <div className='flex flex-row items-center'>
             <div className="dropdown dropdown-end mr-3 md:mr-8">
