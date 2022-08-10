@@ -1,21 +1,21 @@
 const initialstate = {
   loading: false,
-  employee: null,
+  data: null,
 };
 
-export const employeeReducer = (state = initialstate, action) => {
+export const skillReducer = (state = initialstate, action) => {
   switch (action.type) {
-    case "Request_Update_Employee":
+    case "Request_Add_Skill":
       return {
         ...state,
         loading: true,
       };
-    case "Update_Employee_Success":
+    case "Add_Skill_Success":
       return {
         ...state,
-        employee: action.payload,
+        data: action.payload,
       };
-    case "Update_Employee_Failed":
+    case "Add_Skill_Failed":
       return {
         ...state,
         error: action.payload,
