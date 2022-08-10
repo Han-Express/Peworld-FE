@@ -1,9 +1,9 @@
 import axios from "axios";
 
-export const AddSkillRequest = (payload) => {
+export const AddSkillRequest = () => {
   return {
     type: "Request_Add_Skill",
-    payload: payload,
+    // payload: payload,
   };
 };
 
@@ -21,22 +21,22 @@ export const AddSkillFailed = (payload) => {
   };
 };
 
-export const AddSkill = (formData) => {
+export const AddSkill = (formData, userId, token) => {
   return (dispatch) => {
-    dispatch(AddSkillSuccess());
+    dispatch(AddSkillRequest());
     axios({
       method: "POST",
-      url: "http://localhost:5000/api/v1/skill",
+      url: "https://coral-app-3yjfb.ondigitalocean.app/api/v1/skill",
       data: {
-        user_id: formData.user_id,
+        user_id: userId,
         skill: formData.skill,
       },
       headers: { 
-        authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyLCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE2NjAxMzEzMzAsImV4cCI6MTY2MDIxNzczMH0.MSu-8tIJnGJWlFkkCEap35yP9Yth5BnTuK5sgY4-AWU"
+        authorization: token
        }
     })
       .then((res) => {
-        dispatch(AddSkillSuccess(res.data));
+        dispatch(AddSkillSuccess(res.data.data));
       })
       .catch((err) => {
         dispatch(AddSkillFailed(err.response));

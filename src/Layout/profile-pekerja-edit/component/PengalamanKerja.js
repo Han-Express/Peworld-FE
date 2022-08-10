@@ -12,18 +12,19 @@ const PengalamanKerja = () => {
       const router = useRouter()
       const dispatch = useDispatch();
       const [addData, setAddData] = useState({
-        user_id: 12,
         company_name: '',
         position: '',
         entry_date: '',
         date_out: '',
         description: ''
       });
+      const {data:auth} = useSelector(state=>state.auth)
       const handleAdd = (e) => {
         e.preventDefault();
-        dispatch(AddExperience(addData));
+        dispatch(AddExperience(addData, auth.userId, auth.token));
         // tambah kondisi loading, data, error
       }
+      
       useEffect(()=> {
         console.log(data, "xixi")
         if (data) {
@@ -31,7 +32,7 @@ const PengalamanKerja = () => {
             icon: "success",
             text: "Data Successfully Updated",
           });
-            router.replace("/profile/edit");
+            router.replace(`/profile/edit${auth.userId}`);
         } else if (error) {
           Swal.fire({
             icon: "error",

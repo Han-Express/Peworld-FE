@@ -6,17 +6,19 @@ import { Logout } from '../redux/action/auth'
 import Swal from 'sweetalert2'
 
 const Navbar = () => {
-  const {data, error, isLogin} = useSelector((state) => state.auth)
-  const dispatch = useDispatch()  
+  const { data, error, isLogin } = useSelector((state) => state.auth)
+  const dispatch = useDispatch()
   const router = useRouter()
 
   return (
-    <> 
-      {isLogin ? <nav className="md:px-24 bg-white ">
+    <>
+      {isLogin ? <nav className="md:px-24 bg-white shadow-2xl">
         <div className="flex flex-row justify-between navbar items-center">
-          <div className='flex flex-row'>
-            <img className='' src='/img/logo.svg' />
-          </div>
+          <Link href={`/home`}>
+            <div className='flex flex-row'>
+              <img className='' src='/img/logo.svg' />
+            </div>
+          </Link>
           <div className='flex flex-row items-center'>
             <div className="dropdown dropdown-end mr-3 md:mr-8">
               <label tabindex="0" className="">
@@ -48,7 +50,7 @@ const Navbar = () => {
                 </div>
               </label>
               <ul tabindex="0" className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-                <Link href={data?.role==='employee'?'/profile':'/profile/comp-profile'}>
+                <Link href={data?.role === 'employee' ? `/profile/${data.userId}` : `/profile/comp-profile/${data.userId}`}>
                   <li>
                     <a className="justify-between">
                       Profile
@@ -70,7 +72,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </nav> : <nav className="md:px-24 bg-white">
+      </nav> : <nav className="md:px-24 bg-white shadow-2xl">
         <div className="flex flex-row justify-between items-center navbar">
           <div className='flex flex-row'>
             <img className='' src='/img/logo.svg' />
@@ -90,7 +92,7 @@ const Navbar = () => {
         </div>
       </nav>}
 
-      
+
 
     </>
   )

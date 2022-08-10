@@ -8,7 +8,7 @@ const HirePage = ({employees, skill}) => {
     <Layout>
     <div>
     <div className="bg-slate-100 pb-16">
-      <div className="bg-violet-700 h-80 md:w-full mx-auto rounded-xl w-11/12"></div>
+      <div className="bg-[#5E50A1] h-80 md:w-full mx-auto rounded-xl w-11/12"></div>
         <div className="my-5 flex-row md:flex md:w-4/6 w-11/12 mx-auto -mt-64">
           <div className="bg-white md:w-4/6 p-6 w-full mr-10 justify-around md:rounded-xl">
             <div>
@@ -28,7 +28,7 @@ const HirePage = ({employees, skill}) => {
                 {employees[0].description}
               </p>
             </div>
-            <button className="bg-violet-700 hover:opacity-90 transition p-2 my-6 rounded-md w-full text-white font-semibold">Hire</button>
+            <button className="bg-[#5E50A1] hover:opacity-90 transition p-2 my-6 rounded-md w-full text-white font-semibold">Hire</button>
             <div>
               <div className="text-lg font-semibold">
                 <p>Skill</p>
@@ -50,15 +50,15 @@ const HirePage = ({employees, skill}) => {
               <form action="#">
                 <label className="text-slate-600" for="category">Tujuan tentang pesan ini : </label>
                 <br/>
-                <select name="category" for="category" className="flex flex-col mb-3 w-full p-2 mt-3 bg-white border-[1px] rounded-md focus:border-violet-700" >
+                <select name="category" for="category" className="flex flex-col mb-3 w-full p-2 mt-3 bg-white border-[1px] rounded-md focus:border-[#5E50A1]" >
                   <option value="web">Project</option>
                   <option value="marketing">Example</option>
                   <option value="design">Example</option>
                 </select>
                 <label className="text-slate-600" for="comment">Pesan :</label>
-                <textarea className="w-full border-[1px] rounded-md h-4/6 border-violet-700 p-2 mt-3" name="comment" placeholder="tinggalkan pesan disini"></textarea>
+                <textarea className="w-full border-[1px] rounded-md h-4/6 border-[#5E50A1] p-2 mt-3" name="comment" placeholder="tinggalkan pesan disini"></textarea>
                 <br/>
-                <input className=" bg-violet-700 px-2 py-1 w-full mx-auto mt-4 rounded-lg hover:cursor-pointer text-white" type="submit" value="Kirim" />
+                <input className=" bg-[#5E50A1] px-2 py-2 w-full mx-auto mt-4 rounded-lg hover:cursor-pointer text-white" type="submit" value="Kirim" />
               </form>
             </div>
           </div>

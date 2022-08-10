@@ -7,6 +7,7 @@ import { deleteSkillReducer } from "./DeleteSkill";
 import Auth from "./auth"
 import RegisterTalent from './authRegisterTalent'
 import RegisterCompany from './authRegisterCompany'
+import { companyReducer } from "./UpdateCompany";
 import Talent from './talent'
 import Skill from './skill'
 
@@ -21,8 +22,9 @@ const rootReducer = combineReducers({
  auth: Auth,
  registerTalent: RegisterTalent,
  registerCompany: RegisterCompany,
+ company: companyReducer,
  talent: Talent,
- skill: Skill,
+ getSkill: Skill,
 })
 
 export default rootReducer

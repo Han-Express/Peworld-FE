@@ -21,14 +21,15 @@ export const UpdateEmployeeFailed = (payload) => {
   };
 };
 
-export const UpdateEmployee = (formData) => {
+export const UpdateEmployee = (formData, userId, token) => {
+  console.log(userId)
   return (dispatch) => {
-    dispatch(UpdateEmployeeSuccess());
+    dispatch(UpdateEmployeeRequest());
     axios({
       method: "PATCH",
-      url: "http://localhost:5000/api/v1/employees/12",
+      url: `https://coral-app-3yjfb.ondigitalocean.app/api/v1/employees/${userId}`,
       headers: { 
-        authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyLCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE2NjAwNDk5NDEsImV4cCI6MTY2MDEzNjM0MX0.YZK-d24kLvhsbi6DKVcDCOvlcfgudd6UJgBAPuJKT8w"
+        authorization: token
        },
       data: {
         ...formData, 

@@ -1,10 +1,10 @@
 import React from 'react'
-import CompanyProfile from '../../../Layout/Profile-Perusahaan'
+import CompanyProfile from '../../../../Layout/Profile-Perusahaan'
 
 
 
-export async function getServerSideProps() {
-  const res = await fetch('http://localhost:5000/api/v1/companies/15')
+export async function getServerSideProps(context) {
+  const res = await fetch(`https://coral-app-3yjfb.ondigitalocean.app/api/v1/companies/${context.params.id}`)
   const data = await res.json()
   console.log(data.data, "awowkwk")
   return {

@@ -21,14 +21,14 @@ export const AddExperienceFailed = (payload) => {
   };
 };
 
-export const AddExperience = (formData) => {
+export const AddExperience = (formData, userId, token) => {
   return (dispatch) => {
-    dispatch(AddExperienceSuccess());
+    dispatch(AddExperienceRequest());
     axios({
       method: "POST",
-      url: "http://localhost:5000/api/v1/experience",
+      url: "https://coral-app-3yjfb.ondigitalocean.app/api/v1/experience",
       data: {
-        user_id: formData.user_id,
+        user_id: userId,
         company_name: formData.company_name,
         position: formData.position,
         entry_date: formData.entry_date,
@@ -36,7 +36,7 @@ export const AddExperience = (formData) => {
         description: formData.description
       },
       headers: { 
-        authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyLCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE2NjAwNDI4MTksImV4cCI6MTY2MDEyOTIxOX0._gf6JBGl9LlaR8Vcg2S3hCBM9QwmDxa_8ZBNk24RFDI"
+        authorization: token
        }
     })
       .then((res) => {

@@ -21,16 +21,16 @@ export const DeleteSkillFailed = (payload) => {
   };
 };
 
-export const DeleteSkill = (formData) => {
+export const DeleteSkill = (formData, userId, token) => {
   console.log(formData.skill, "testes")
   return (dispatch) => {
-    dispatch(DeleteSkillSuccess());
+    dispatch(DeleteSkillRequest());
     axios({
       method: "DELETE",
-      url: `http://localhost:5000/api/v1/skill/12?skill=${formData.skill}`,
+      url: `https://coral-app-3yjfb.ondigitalocean.app/api/v1/skill/${userId}?skillId=${formData.skill}`,
       data: {},
       headers: { 
-        authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyLCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE2NjAxMzEzMzAsImV4cCI6MTY2MDIxNzczMH0.MSu-8tIJnGJWlFkkCEap35yP9Yth5BnTuK5sgY4-AWU"
+        authorization: token
        }
     })
       .then((res) => {

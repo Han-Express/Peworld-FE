@@ -4,36 +4,52 @@ import { DeleteSkill } from "../../../redux/action/DeleteSkill";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import Swal from "sweetalert2";
+import {GetSkill} from '../../../redux/action/skill'
 
 
-const Skill = ({skill}) => {
+const Skill = ({}) => {
   const { loading, data, error} = useSelector(
     (state) => state.skill
   );
+  const {data:auth} = useSelector(state=>state.auth)
+  const [refetch, setRefetch] = useState(false)
   const router = useRouter()
   const dispatch = useDispatch();
   const [addData, setAddData] = useState({
-    user_id: 12,
+    
     skill: ''
   });
   const handleAdd = (e) => {
     e.preventDefault();
-    dispatch(AddSkill(addData));
+    setRefetch(!refetch);
+    dispatch(AddSkill(addData, auth.userId, auth.token));
+   
     // tambah kondisi loading, data, error
   }
+ 
   const handleDelete = (skill) => {
-    dispatch(DeleteSkill({skill: skill}));
+    setRefetch(!refetch);
+    dispatch(DeleteSkill({skill: skill}, auth.userId, auth.token));
+    
     console.log(skill, "testes")
     // tambah kondisi loading, data, error
   }
+
+  const {data:skill} = useSelector(state => state.getSkill)
+  
+  useEffect(()=>{
+    dispatch(GetSkill(auth.userId))
+  },[skill])
+
   useEffect(()=> {
-    console.log(data, "xixi")
+    
     if (data) {
+      console.log(data, "test test jalan woyy")
       Swal.fire({
         icon: "success",
         text: "Data Successfully Added",
+        
       });
-        router.replace("/profile/edit");
     } else if (error) {
       Swal.fire({
         icon: "error",
@@ -43,7 +59,7 @@ const Skill = ({skill}) => {
     }
   },[data, error])
 
-  
+  console.log(skill)
   return (
     <>
       <div className="bg-white mt-10 rounded-lg shadow-xl">
@@ -70,13 +86,13 @@ const Skill = ({skill}) => {
           </div>
           </form>
           <div className="flex flex-row mt-4">
-          {skill.map((item)=> {
+          {skill?.data?.map((item)=> {
               return (
                 <>
                   <div className="flex bg-[#FBB017]/60 border-[#FBB017] border-2 p-2 w-32 justify-between rounded-md mr-5">
                     <p className="text-white font-bold">{item.skill}</p>
                       <div className="flex flex-row justify-end">
-                        <button onClick={()=> handleDelete(item.skill)} value={item.skill}>
+                        <button onClick={()=> handleDelete(item.skill_id)} value={item.skill}>
                           <img className="w-3" src="/img/delete.svg" />
                         </button>
                       </div>

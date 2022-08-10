@@ -9,7 +9,7 @@ const Edit = ({employees}) => {
                     <div className="flex justify-center mt-5">
                         <div class="avatar">
                             <div class="w-36 rounded-full">
-                                <img src={`http://localhost:5000/static/${employees[0].image}`} />
+                                <img src={`https://coral-app-3yjfb.ondigitalocean.app/static/${employees[0].image}`} />
                             </div>
                         </div>
                     </div>
