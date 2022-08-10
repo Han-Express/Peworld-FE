@@ -4,8 +4,6 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { GetTalent } from "../../redux/action/talent"
 import { useRouter } from 'next/router'
-import { GetSkill } from "../../redux/action/skill"
-import { GetbyFreelance } from '../../redux/action/skill'
 
 const Homecomp = () => {
     const { data } = useSelector((state) => state.talent)
@@ -59,8 +57,8 @@ const Homecomp = () => {
 
 
     return (
-        <div className='flex flex-col px-5 py-14 justify-content items-center bg-[#E5E5E5] h-full w-full'>
-            <div className='bg-white rounded h-14 mb-8 flex w-4/5 justify-between items-center '>
+        <div className='flex flex-col ms:px-5 py-14 justify-content items-center bg-[#E5E5E5] h-full w-full'>
+            <div className='bg-white rounded h-14 mb-8 flex sm:w-4/5 justify-between items-center mx-2'>
                 <div className='flex w-full relative items-center justify-between border-r-[2px] border-gray-200'>
                     <div className='flex w-full px-4'>
                         <input text="input" name="search" placeholder="Search for any skill" aria-label="Search for any skill" className="outline-none w-full px-3 py-2 placeholder-gray-500 text-black rounded" onChange={(e) => {
@@ -123,7 +121,7 @@ const Homecomp = () => {
                             <div className='flex px-4 py-4 mt-4 mb-4 ml-2 mr-2 items-center justify-between'>
                                 <div className='flex'>
                                     <div>
-                                        <img className='px-3 py-4' src={`https://coral-app-3yjfb.ondigitalocean.app/public/${item.image}`}></img>
+                                        <img className='px-3 py-4' src={`https://coral-app-3yjfb.ondigitalocean.app/static/${item.image}`}></img>
                                     </div>
                                     <div className='ml-4'>
                                         <h1 className='font-medium text-lg'>{item.name}</h1>
