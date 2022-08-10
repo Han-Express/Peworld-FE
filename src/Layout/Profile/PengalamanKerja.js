@@ -16,9 +16,9 @@ const PengalamanKerja = ({experience}) => {
                   <h4 className="text-lg">{item.company_name}</h4>
                 </div>
                 <div className="flex text-[#9EA0A5]">
-                  <h4 className="text-base">{moment(item.entry_date).format("MMMM YYYY")} - {moment(item.entry_out).format("MMMM YYYY")}</h4>
+                  <h4 className="text-base">{moment(item.entry_date).format("MMMM YYYY")} - {moment(item.date_out).format("MMMM YYYY")}</h4>
                   <h6 className="ml-4">
-                    {Number(moment(item.entry_date).format("MM"))}
+                    {Number(moment(item.date_out).diff("MM"))} 
                     {/* {moment("01-2012", "MM-YYYY").fromNow()} */}
                     {/* {moment().subtract(.7, 'years') == moment().subtract(8, 'months')} */}
                   </h6>
