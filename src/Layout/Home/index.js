@@ -1,8 +1,14 @@
 import React from 'react'
+import Homecomp from "../../Component/Home/home"
+import Layout from '../../Component/Layout'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <Layout>
+        <Homecomp />
+      </Layout>
+    </>
   )
 }
 
