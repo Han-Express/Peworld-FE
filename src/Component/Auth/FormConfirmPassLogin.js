@@ -2,7 +2,7 @@ import React from 'react'
 
 const ConfirmPassComp = () => {
   return (
-    <div className='bg-[#E5E5E5] w-full h-screen md:w-3/5 px-32 py-24'>
+    <div className='bg-[#E5E5E5] w-full h-screen md:w-3/5 md:px-32 py-24 px-5'>
       <div className='text-3xl font-semibold'>Please login with your account</div>
       <div className='py-5'>We have an an email containing a password reset instruction toyour email. please check your email.</div>
       <form>

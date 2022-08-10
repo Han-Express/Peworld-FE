@@ -11,7 +11,7 @@ const CompanyProfile = ({companies}) => {
   return (
     <Layout>
     <div className="bg-slate-300 pt-12 py-32 ">
-    <div className="font-sans bg-violet-700 h-48 w-11/12 mx-auto md:w-3/5 rounded-2xl"></div>
+    <div className="font-sans bg-[#5E50A1] h-48 w-11/12 mx-auto md:w-3/5 rounded-2xl"></div>
         <div className="-mt-24 bg-white mx-auto rounded-b-2xl w-11/12 md:w-3/5"> 
           <div className="flex flex-col items-center p-4">
             <img className="my-4" src={`http://localhost:5000/static/${companies[0].image}`}/>
@@ -21,7 +21,7 @@ const CompanyProfile = ({companies}) => {
                 <p className="flex text-center justify-center text-sm mb-2"><span className="mr-2 mt-1"><FiMapPin/></span>{companies[0].domicile}</p>
                 <p>{companies[0].description}</p>
                 <Link href="/profile/comp-profile/edit">
-                <button className="bg-violet-700 hover:opacity-90 transition p-2 my-6 rounded-md w-3/5 text-white font-semibold">Edit Profile</button>
+                <button className="bg-[#5E50A1] hover:opacity-90 transition p-2 my-6 rounded-md w-3/5 text-white font-semibold">Edit Profile</button>
                 </Link>
               </div>
                 <div className="text-base text-slate-600">

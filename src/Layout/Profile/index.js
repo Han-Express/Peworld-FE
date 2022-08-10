@@ -13,7 +13,7 @@ const Profile = ({employees, portfolio, skill, experience}) => {
     <>
     <Layout>
     <div className="bg-slate-100 pb-16">
-      <div className="bg-violet-700 h-80 w-full"></div>
+      <div className="bg-[#5E50A1] h-80 w-full"></div>
         <div className="flex my-5 md:flex-row w-5/6 mx-auto -mt-64 flex-col">
           <div className="bg-white rounded-xl p-6 md:w-1/3 mb-10 w-full border-2 mr-10 justify-around">
             <div>
@@ -32,7 +32,7 @@ const Profile = ({employees, portfolio, skill, experience}) => {
               <p>{employees[0].description}</p>
             </div>
             <Link href="/hire">
-            <button className="bg-violet-700 hover:opacity-90 transition p-2 my-6 rounded-md w-full text-white font-semibold">Hire</button>
+            <button className="bg-[#5E50A1] hover:opacity-90 transition p-2 my-6 rounded-md w-full text-white font-semibold">Hire</button>
             </Link>
             <div>
               <div className="text-lg font-semibold">
@@ -56,10 +56,10 @@ const Profile = ({employees, portfolio, skill, experience}) => {
         <div className="bg-white rounded-xl p-5 w-full h-fit">
           <div className="px-2 py-2">
             <div>
-              <button className={`hover:underline font-semibold focus:underline focus:text-violet-700 mr-5 underline-offset-8 ${page === 'Portfolio' ? 'underline text-violet-700' : 'text-slate-700'}`}  onClick={(e) => setPage(e.target.value)} value={'Portfolio'}>
+              <button className={`hover:underline font-semibold focus:underline focus:text-[#5E50A1] mr-5 underline-offset-8 ${page === 'Portfolio' ? 'underline text-[#5E50A1]' : 'text-slate-700'}`}  onClick={(e) => setPage(e.target.value)} value={'Portfolio'}>
                 Portfolio
               </button>
-              <button className={`hover:underline  font-semibold focus:underline focus:text-violet-700 underline-offset-8 ${page === 'PengalamanKerja' ? 'underline text-violet-700' : 'text-slate-700'}`} onClick={(e) => setPage(e.target.value)} value={'PengalamanKerja'}>
+              <button className={`hover:underline  font-semibold focus:underline focus:text-[#5E50A1] underline-offset-8 ${page === 'PengalamanKerja' ? 'underline text-[#5E50A1]' : 'text-slate-700'}`} onClick={(e) => setPage(e.target.value)} value={'PengalamanKerja'}>
                 Pengalaman Kerja
               </button>
             </div>

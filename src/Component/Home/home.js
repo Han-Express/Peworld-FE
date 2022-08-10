@@ -9,8 +9,8 @@ const Homecomp = () => {
     }
 
     return (
-        <div className='flex flex-col px-5 py-14 justify-content items-center bg-[#E5E5E5] h-full w-full'>
-            <div className='bg-white rounded h-14 mb-8 flex w-4/5 justify-between items-center '>
+        <div className='flex flex-col ms:px-5 py-14 justify-content items-center bg-[#E5E5E5] h-full w-full'>
+            <div className='bg-white rounded h-14 mb-8 flex sm:w-4/5 justify-between items-center mx-2'>
                 <div className='flex w-full relative items-center justify-between border-r-[2px] border-gray-200'>
                     <div className='flex w-full px-4'>
                         <input text="input" name="search" placeholder="Search for any skill" aria-label="Search for any skill" className="outline-none w-full px-3 py-2 placeholder-gray-500 text-black rounded" />
@@ -42,18 +42,18 @@ const Homecomp = () => {
                     <button className='rounded bg-[#5E50A1] text-white px-6 py-2 mr-6 h-1/2 text-sm hover:bg-violet-600'>Search</button>
                 </div>
             </div>
-            <div className='bg-white rounded w-4/5'>
-                <div className='flex px-4 py-4 mt-4 mb-4 ml-2 mr-2 items-center justify-between'>
-                    <div className='flex'>
+            <div className='bg-white rounded sm:w-4/5 ml-10'>
+                <div className='flex sm:px-4 px-2 sm:py-4 mt-4 mb-4 ml-2 mr-2 items-center sm:justify-between bg-yellow-200'>
+                    <div className='sm:flex'>
                         <div>
-                            <img className='px-3 py-4' src='/img/ProfileHome1.png'></img>
+                            <img className='sm:px-3 sm:py-4' src='/img/ProfileHome1.png'></img>
                         </div>
                         <div className='ml-4'>
                             <h1 className='font-medium text-lg'>Louis Tomlinson</h1>
                             <h2 className='mt-2'>Web developer - Freelance</h2>
                             <div className='flex items-center mt-2 w-4/5'>
-                                <div>
-                                    <img className='mr-3' src='/img/map.png'></img>
+                                <div className=''>
+                                    <img className='mr-10' src='/img/map.png'></img>
                                 </div>
                                 <h2>Lorem ipsum</h2>
                             </div>
@@ -64,7 +64,7 @@ const Homecomp = () => {
                             </div>
                         </div>
                     </div>
-                    <button className='rounded bg-[#5E50A1] text-white px-4 py-3 mr-6 h-1/2 text-sm hover:bg-violet-600'>Lihat Profile</button>
+                    <button className='rounded bg-[#5E50A1] text-white sm:px-4 px-2 py-2 sm:py-3 mr-6 h-1/2 text-sm hover:bg-violet-600'>Lihat Profile</button>
                 </div>
                 <hr />
                 <div className='flex px-4 py-4 mt-4 mb-4 ml-2 mr-2 items-center justify-between'>
