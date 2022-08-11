@@ -58,19 +58,8 @@ some technology used in this project.
 ## Demo
 
 [Demo web app](https://han-express-peworld.netlify.app/)
-### Screenshot
-<!-- kalau bisa dibuat tabel antara tampilan web dan mobile -->
-|name  | web   | mobile |
-| ------------- | ------------- | -------------|
-| Main page       | ![main]()| ![res-main]()|
-| Home Page       | ![landing]()| ![res-home]()|
-| Login        | ![login]()| ![res-login]() |
-| Register        | ![register]()| ![res-register]() |
-| Recruiter Profile | ![profile]()|![res-profile]() |
-| Company Profile |![companyProfile]()|![company-profile]()|
-| Edit Recruiter Profile | ![editProfile]()|![edit-res-profile]() |
-| Edit Company Profile |![editCompanyProfile]()|![edit-company-profile]()|
-| Chat |![editChat]()|![edit-chat-page]()|
+
+
 
 
 
