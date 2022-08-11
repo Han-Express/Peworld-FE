@@ -1,8 +1,90 @@
+# Hire Job App
+<!-- NAVIGATION -->
+<ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#feature">Feature</a></li>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#related">Related</a></li>
+      </ul>
+    </li>
+    <li><a href="#demo">Demo</a>
+          <ul>
+        <li><a href="#screenshot">Screenshot</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributors">Contributors</a></li>
+</ol>
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+Aplikasi ini merupakan sebuah website yang digunakan oleh pekerja dan perekrut. Memberikan kemudahan dalam mencari pekerjaan dan merekrut pekerja.   
+
+### Feature
+Pekerja
+- Mendaftar sebagai pekerja​
+- Mencari pekerjaan​
+- Memperlihatkan portfolio​
+- Memperlihatkan pengalaman kerja​
+
+Perekrut 
+- Mendaftar sebagai perekrut​
+- Mencari pekerja berdasarkan skill​
+- Mencari pekerja berdasarkan freelance dan fulltime​
+- Melihat profil pekerja secara lengkap​
+
+### Built With
+
+some technology used in this project.
+- [Axios](https://www.npmjs.com/package/axios)
+- [React](https://reactjs.org/)
+- [Next](https://nextjs.org/)
+- [Redux](https://redux.js.org/)
+- [Tailwind](https://tailwindcss.com/)
+<!-- - ditambahin lagi -->
+### Related
+
+[Peworld_be (API)](https://github.com/Han-Express/peworld-be)
+
+## Demo
+
+[Demo web app](https://han-express-peworld.netlify.app/)
+### Screenshot
+<!-- kalau bisa dibuat tabel antara tampilan web dan mobile -->
+|name  | web   | mobile |
+| ------------- | ------------- | -------------|
+| Main page       | ![main]()| ![res-main]()|
+| Home Page       | ![landing]()| ![res-home]()|
+| Login        | ![login]()| ![res-login]() |
+| Register        | ![register]()| ![res-register]() |
+| Recruiter Profile | ![profile]()|![res-profile]() |
+| Company Profile |![companyProfile]()|![company-profile]()|
+| Edit Recruiter Profile | ![editProfile]()|![edit-res-profile]() |
+| Edit Company Profile |![editCompanyProfile]()|![edit-company-profile]()|
+| Chat |![editChat]()|![edit-chat-page]()|
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+Clone this repo
+ 
+```sh
+git clone https://github.com/Han-Express/peworld-fe.git
+```
+
+run the development server:
 
 ```bash
 npm run dev
@@ -12,11 +94,6 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ## Learn More
 
@@ -32,3 +109,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+<!-- Contributors -->
+## Contributors
+
+- FrontEnd [Dio Fitriadi](https://github.com/diofitriadi)
+- FrontEnd [Muhammad Nahrowi](https://github.com/ahmadvvahyudi)
+- FrontEnd [Annisa Dzakia](https://github.com/dzakia-st3)
+- BackEnd [Trevin Kurnia](https://github.com/trevinkur)
+- BackEnd [Lukman Hakim](https://github.com/hlukman86)
