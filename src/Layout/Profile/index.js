@@ -7,9 +7,11 @@ import Portfolio from "./Portfolio";
 import PengalamanKerja from "./PengalamanKerja";
 import Link from "next/link";
 import { useSelector } from "react-redux";
+import { useRouter } from "next/router";
 
 const Profile = ({ employees, portfolio, skill, experience }) => {
   const [page, setPage] = useState("")
+  const router = useRouter()
 
   const {data} = useSelector(state => state.auth)
 
@@ -35,7 +37,7 @@ const Profile = ({ employees, portfolio, skill, experience }) => {
               <div className="text-sm text-slate-600 mt-2">
                 <p>{employees[0].description}</p>
               </div>
-              {data?.role==="recruiter" ? <Link href={`/hire/${data.userId}`}>
+              {data?.role==="recruiter" ? <Link href={`/hire/${router.query.id}`}>
                 <button className="bg-[#5E50A1] hover:opacity-90 transition p-2 my-6 rounded-md w-full text-white font-semibold">Hire</button>
               </Link>: <Link href={`/profile/edit/${data.userId}`}>
                 <button className="bg-[#5E50A1] hover:opacity-90 transition p-2 my-6 rounded-md w-full text-white font-semibold">Edit</button>

@@ -22,14 +22,16 @@ const Portofolio = () => {
       formData.append("image", addData.image);
       const handleAdd = (e) => {
         e.preventDefault();
-        console.log(formData)
+        console.log("buat test")
+        console.log(formData.get("name"), "buat test")
         dispatch(AddPortfolio(formData, auth.userId, auth.token));
         // tambah kondisi loading, data, error
       }
       const {data:auth} = useSelector(state=>state.auth)
       useEffect(()=> {
-        console.log(data, "xixi")
+        
         if (data) {
+          console.log(data, "xixi")
           Swal.fire({
             icon: "success",
             text: "Data Successfully Updated",
@@ -128,7 +130,9 @@ const Portofolio = () => {
             {/* </input> */}
           </div>
           <div className="border-y-2 mt-10 mb-32">
-            <button className="border-2 text-[#FBB017] text-lg font-bold border-[#FBB017] w-full p-2 my-10 rounded-sm ">
+            <button className="border-2 text-[#FBB017] text-lg font-bold border-[#FBB017] w-full p-2 my-10 rounded-sm "
+            onClick={(e) => handleAdd(e)}
+            >
               Tambah portofolio
             </button>
           </div>

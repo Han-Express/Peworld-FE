@@ -1,8 +1,16 @@
+import Swal from "sweetalert2";
 import Layout from "../../Component/Layout"
 
 
 
 const HirePage = ({employees, skill}) => {
+  const handleNotif = (e) => {
+    e.preventDefault();
+    Swal.fire({
+      icon: "success",
+      text: "Send Message Success",
+    });
+  }
   return(
     <>
     <Layout>
@@ -44,7 +52,7 @@ const HirePage = ({employees, skill}) => {
           </div>
         <div className="flex flex-col bg-white rounded-xl p-5 w-full h-[80vh] md:mt-0 mt-10">
           <div className="p-1">
-            <h1 className="text-2xl font-semibold mb-4">Hubungi Lous Tomlinson</h1>
+            <h1 className="text-2xl font-semibold mb-4">Hubungi {employees[0].name}</h1>
             <p className="text-sm font-normal mb-8 text-slate-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod ipsum et dui rhoncus auctor.</p>
             <div className="flex flex-col text-sm">
               <form action="#">
@@ -55,10 +63,13 @@ const HirePage = ({employees, skill}) => {
                   <option value="marketing">Example</option>
                   <option value="design">Example</option>
                 </select>
-                <label className="text-slate-600" for="comment">Pesan :</label>
+                <label className="text-slate-600" for="comment">Pesan : </label>
                 <textarea className="w-full border-[1px] rounded-md h-4/6 border-[#5E50A1] p-2 mt-3" name="comment" placeholder="tinggalkan pesan disini"></textarea>
                 <br/>
-                <input className=" bg-[#5E50A1] px-2 py-2 w-full mx-auto mt-4 rounded-lg hover:cursor-pointer text-white" type="submit" value="Kirim" />
+                <input className=" bg-[#5E50A1] px-2 py-2 w-full mx-auto mt-4 rounded-lg hover:cursor-pointer text-white"
+                 type="submit" value="Kirim"
+                 onClick={handleNotif}
+                  />
               </form>
             </div>
           </div>
