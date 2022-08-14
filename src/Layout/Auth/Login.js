@@ -5,10 +5,12 @@ import ImageLeft from '../../Component/Auth/imageLeft'
 const Login = () => {
   return (
     <>
-    <div className='flex'>
-    <ImageLeft/>
-    <Logincomp/>
-    </div>
+      <div className='bg-[#E5E5E5] py-10'>
+        <div className='flex bg-[#E5E5E5] sm:mx-16'>
+          <ImageLeft />
+          <Logincomp />
+        </div>
+      </div>
     </>
   )
 }
