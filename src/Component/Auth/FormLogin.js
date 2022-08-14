@@ -55,7 +55,7 @@ const LoginComp = () => {
 
 
   return (
-    <div className='bg-[#E5E5E5] w-full h-screen md:w-3/5 md:px-32 py-20 px-5'>
+    <div className='bg-[#E5E5E5] w-full h-screen md:w-1/2 py-20 px-5'>
       <div className='text-3xl font-semibold'>Halo, Pewpeople</div>
       <div className='py-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod ipsum et dui rhoncus auctor.
       </div>

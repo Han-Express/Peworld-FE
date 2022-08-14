@@ -39,7 +39,7 @@ const Skill = ({}) => {
   
   useEffect(()=>{
     dispatch(GetSkill(auth.userId))
-  },[skill])
+  },[refetch])
 
   useEffect(()=> {
     

@@ -57,55 +57,55 @@ const CompanyComp = () => {
   }, [error])
 
   return (
-    <div className='bg-[#E5E5E5] w-full md:h-screen md:w-3/5 md:px-32 py-10 px-5'>
+    <div className='bg-[#E5E5E5] w-full md:h-full md:w-1/2 py-10 px-5'>
       <div className='text-3xl font-semibold'>Halo, Pewpeople</div>
       <div className='pt-2 pb-3 text-sm '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod <br /> ipsum et dui rhoncus auctor.
       </div>
-      <form onSubmit={handleRegister} className='no-scrollbar md:overflow-y-scroll h-4/6 mb-10'>
+      <form onSubmit={handleRegister} className='no-scrollbar md:overflow-y-scroll h-full mb-10 w-full'>
         <div className='flex flex-col mb-5'>
-          <span>Nama</span>
+          <span className='mb-2'>Nama</span>
           <input text="input" placeholder="Masukkan nama panjang" className="outline-none px-3 py-2 placeholder-gray-500 text-black rounded-[3px]" onChange={(e) => setFormRegisterCompany((prevData) => ({
             ...prevData,
             name: e.target.value
           }))} />
         </div>
         <div className='flex flex-col mb-5'>
-          <span>Email</span>
+          <span className='mb-2'>Email</span>
           <input text="input" placeholder="Masukkan alamat email" className="outline-none px-3 py-2 placeholder-gray-500 text-black rounded-[3px]" onChange={(e) => setFormRegisterCompany ((prevData) => ({
             ...prevData,
             email: e.target.value
           }))}/>
         </div>
         <div className='flex flex-col mb-5'>
-          <span>Perusahaan</span>
+          <span className='mb-2'>Perusahaan</span>
           <input text="input" placeholder="Masukkan nama perusahaan" className="outline-none px-3 py-2 placeholder-gray-500 text-black rounded-[3px] " onChange={(e) => setFormRegisterCompany((prevData) => ({
             ...prevData,
             company_name: e.target.value
           }))}/>
         </div>
         <div className='flex flex-col mb-5'>
-          <span>Bidang Perusahaan</span>
+          <span className='mb-2'>Bidang Perusahaan</span>
           <input text="input" placeholder="Masukkan bidang perusahaan Anda" className="outline-none px-3 py-2 placeholder-gray-500 text-black rounded-[3px]" onChange={(e) => setFormRegisterCompany((prevData) => ({
             ...prevData,
             sector: e.target.value
           }))}/>
         </div>
         <div className='flex flex-col mb-5'>
-          <span>No Handphone</span>
+          <span className='mb-2'>No Handphone</span>
           <input text="input" placeholder="Masukkan no handphone" className="outline-none px-3 py-2 placeholder-gray-500 text-black rounded-[3px] " onChange={(e) => setFormRegisterCompany((prevData) => ({
             ...prevData,
             phone_number: e.target.value
           }))}/>
         </div>
         <div className='flex flex-col mb-5'>
-          <span>Kata Sandi</span>
+          <span className='mb-2'>Kata Sandi</span>
           <input type="password" text="input" placeholder="Masukkan kata sandi" className="outline-none px-3 py-2 placeholder-gray-500 text-black rounded-[3px]" onChange={(e) => setFormRegisterCompany((prevData) => ({
             ...prevData,
             password: e.target.value
           }))}/>
         </div>
         <div className='flex flex-col mb-8'>
-          <span>Konfirmasi Kata Sandi</span>
+          <span className='mb-2'>Konfirmasi Kata Sandi</span>
           <input type="password" text="input" placeholder="Masukkan konfirmasi kata sandi" className="outline-none px-3 py-2 placeholder-gray-500 text-black rounded-[3px]" onChange={(e) => setFormRegisterCompany ((prevData) => ({
             ...prevData,
             confirm_pass: e.target.value

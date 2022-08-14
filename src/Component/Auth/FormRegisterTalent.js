@@ -55,41 +55,41 @@ const TalentComp = () => {
   }, [error])
 
   return (
-    <div className='bg-[#E5E5E5] w-full md:h-screen md:w-3/5 md:px-32 pt-14 px-5'>
+    <div className='bg-[#E5E5E5] w-full md:h-screen md:w-1/2 pt-14 px-5'>
       <div className='text-3xl font-semibold'>Halo, Pewpeople</div>
       <div className='pt-2 pb-3 text-sm '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod <br /> ipsum et dui rhoncus auctor.
       </div>
       <form onSubmit={handleRegister} className='no-scrollbar h-4/6'>
         <div className='flex flex-col mb-5'>
-          <span>Nama</span>
+          <span className='mb-2'>Nama</span>
           <input text="input" placeholder="Masukkan nama panjang" className="outline-none px-3 py-2 placeholder-gray-500 text-black rounded-[3px]" onChange={(e) => setFormRegisterTalent ((prevData) => ({
              ...prevData,
              name: e.target.value
           }))}/>
         </div>
         <div className='flex flex-col mb-5'>
-          <span>Email</span>
+          <span className='mb-2'>Email</span>
           <input text="input" placeholder="Masukkan alamat email" className="outline-none px-3 py-2 placeholder-gray-500 text-black rounded-[3px]" onChange={(e) => setFormRegisterTalent ((prevData) => ({
             ...prevData,
             email: e.target.value
           }))}/>
         </div>
         <div className='flex flex-col mb-5'>
-          <span>No Handphone</span>
+          <span className='mb-2'>No Handphone</span>
           <input text="input" placeholder="no handphone" className="outline-none px-3 py-2 placeholder-gray-500 text-black rounded-[3px]" onChange={(e) => setFormRegisterTalent((prevData) => ({
             ...prevData,
             phone_number: e.target.value
           }))} />
         </div>
         <div className='flex flex-col mb-5'>
-          <span>Kata Sandi</span>
+          <span className='mb-2'>Kata Sandi</span>
           <input type="password" text="input" placeholder="Masukkan kata sandi" className="outline-none px-3 py-2 placeholder-gray-500 text-black rounded-[3px]" onChange={(e) => setFormRegisterTalent((prevData) => ({
             ...prevData,
             password: e.target.value
           }))} />
         </div>
         <div className='flex flex-col mb-8'>
-          <span>Konfirmasi Kata Sandi</span>
+          <span className='mb-2'>Konfirmasi Kata Sandi</span>
           <input type="password" text="input" placeholder="Masukkan konfirmasi kata sandi" className="outline-none px-3 py-2 placeholder-gray-500 text-black rounded-[3px]" onChange={(e) => setFormRegisterTalent((prevData) => ({
             ...prevData,
             confirm_pass: e.target.value
@@ -97,7 +97,7 @@ const TalentComp = () => {
         </div>
         <button className='py-2 bg-[#FBB017] text-white w-full rounded-[3px] hover:bg-amber-400 ' onClick={handleRegister}>Daftar</button>
       </form>
-      <div className='flex justify-center mt-10'>
+      <div className='flex justify-center mt-20'>
         <h2 className='flex pt-5'>Anda sudah punya akun?<Link href='/auth/login'><span className='cursor-pointer text-[#FBB017] font-semibold ml-1'>Masuk disini</span></Link></h2>
       </div>
     </div>
