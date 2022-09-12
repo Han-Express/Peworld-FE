@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useSelector } from "react-redux"
-import ChatList from "./chatList"
+import ChatList from "./ChatList"
 import Message from "./Message"
 
 const ChatLayout = () => {
