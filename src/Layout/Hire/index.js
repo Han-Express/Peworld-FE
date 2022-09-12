@@ -1,29 +1,49 @@
+import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import Layout from "../../Component/Layout"
 
 
 
 const HirePage = ({employees, skill, user, socket}) => {
-
+  const {data} = useSelector(state => state.auth)
   const [header, setHeader] = useState("");
   const [message, setMessage] = useState("");
   const router = useRouter();
   const {id} = router.query
   const handleNotif = (e) => {
     e.preventDefault();
-    socket.emit("sendMessage", {
-      user,
-      receiverId: id,
-      message,
-      header
-    })
+    axios({
+      url: `${process.env.REACT_APP_URL_BE}api/v1/chat/conversations`,
+      method: 'POST',
+      data: {
+        sender_id: data.userId,
+        receiver_id: id 
+      }
+    }).then((res) => {
 
-    Swal.fire({
-      icon: "success",
-      text: "Send Message Success",
-    });
+      socket.emit("sendMessage", {
+        user,
+        receiverId: id,
+        message,
+        header
+      })
+
+      Swal.fire({
+        icon: "success",
+        text: "Send Message Success",
+      });
+    }).catch((err) => {
+      Swal.fire({
+        icon: "success",
+        text: "Send Message Error",
+      });
+    })
+    
+
+    
   }
   return(
     <>
@@ -34,7 +54,7 @@ const HirePage = ({employees, skill, user, socket}) => {
         <div className="my-5 flex-row md:flex md:w-4/6 w-11/12 mx-auto -mt-64">
           <div className="bg-white md:w-4/6 p-6 w-full mr-10 justify-around md:rounded-xl">
             <div>
-              <img className="mx-auto" src="/img/companyProfile.png"/>
+              <img className="mx-auto" src={`${process.env.REACT_APP_URL_BE}static/${employees[0].image}`} alt={employees[0].name}/>
             </div>
               <h1 className="mt-5 text-lg font-semibold">{employees[0].name}</h1>
             <div className="text-sm my-4">

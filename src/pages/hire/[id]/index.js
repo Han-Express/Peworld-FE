@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import HirePage from '../../../Layout/Hire'
-import {io} from "socket.io-client"
 import { useSelector } from 'react-redux'
 import Layout from '../../../Component/Layout'
 import axios from 'axios'
@@ -24,13 +23,12 @@ export async function getServerSideProps(context) {
 
 
 const Hire = ({employees, skill}) => {
-  const [socket, setSocket] = useState(null);
+  const {socket} = useSelector(state => state.socket) 
   const {data} = useSelector(state => state.auth);
   const [userId, setUserId] = useState(null);
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    setSocket(io("http://localhost:3001"));
     
     setUserId(data.userId)
   },[])
@@ -42,9 +40,6 @@ const Hire = ({employees, skill}) => {
     .catch((err)=> console.log(err)) : null
   }, [userId])
 
-  useEffect(() => {
-    socket?.emit("newUser", userId)
-  }, [socket, user])
 
   return (
     <Layout socket={socket} user={user}>

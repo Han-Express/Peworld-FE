@@ -8,7 +8,6 @@ import Swal from 'sweetalert2'
 
 const LoginComp = () => {
   const { data, error, loading, isLogin} = useSelector((state) => state.auth)
-  console.log(data, 'cek data di login')
   const dispatch = useDispatch()
   const router = useRouter()
   const [formLogin, setFormLogin] = useState({
@@ -28,6 +27,12 @@ const LoginComp = () => {
         title: '',
         text: 'Login Success',
       })
+      // setCookie('token', JSON.stringify(data.token),{
+      //   path: '/',
+      //   maxAge: 3600,
+      //   sameSite: true,
+      // })
+      document.cookie = `token=${data.token}; path=/`
       router.push(`/profile/${data.userId}`)
     } else if (isLogin === true && data?.role === 'recruiter') {
       Swal.fire({
