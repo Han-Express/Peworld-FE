@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AddPortfolio } from "../../../redux/action/AddPortfolio";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import Swal from "sweetalert2";
+import { useDropzone } from "react-dropzone";
+import { Reset } from "../../../redux/action/Reset";
 
 
 const Portofolio = () => {
@@ -17,26 +19,29 @@ const Portofolio = () => {
         link: '',
         image: null,
       });
+      const [imgPreview, setImgPreview] = useState(null)
+      const {data:auth} = useSelector(state=>state.auth)
+      const imageRef = useRef()
+
       formData.append("name", addData.name);
       formData.append("link", addData.link);
       formData.append("image", addData.image);
+      formData.append('user_id', auth.userId)
       const handleAdd = (e) => {
         e.preventDefault();
-        console.log("buat test")
-        console.log(formData.get("name"), "buat test")
-        dispatch(AddPortfolio(formData, auth.userId, auth.token));
+        dispatch(AddPortfolio(formData, auth.token));
         // tambah kondisi loading, data, error
       }
-      const {data:auth} = useSelector(state=>state.auth)
+      
       useEffect(()=> {
-        
+        console.log(data, "xixi")
         if (data) {
-          console.log(data, "xixi")
+          
           Swal.fire({
             icon: "success",
             text: "Data Successfully Updated",
           });
-            router.replace(`/profile/edit/${auth.userId}`);
+          dispatch(Reset())
         } else if (error) {
           Swal.fire({
             icon: "error",
@@ -46,6 +51,29 @@ const Portofolio = () => {
         }
       },[data, error])
       console.log(addData)
+
+      const onDrop =  useCallback((files) => {
+        console.log(files, 'process')
+        setAddData((prev) =>{ 
+          return {...prev, image: files[0]}}
+        )
+        files.forEach((file) => {
+          const readFiles = new FileReader()
+        readFiles.onabort = () => alert('upload cancelled')
+        readFiles.onerror = () => alert('upload error')
+        readFiles.onload = () => {
+          const imgUrl = readFiles.result
+          console.log(imgUrl, 'success')
+          setImgPreview(imgUrl)
+        }
+        readFiles.readAsDataURL(file)
+        })
+        
+        
+      }, [])
+
+      const {getRootProps, getInputProps} = useDropzone({onDrop})
+
   return (
     <>
       {/* portofolio */}
@@ -87,19 +115,29 @@ const Portofolio = () => {
               />
             </div>
           </div>
-          <div action="" className="flex flex-col">
-            <input 
+          <div {...getRootProps()}action="" className="flex flex-col">
+            <input
+            // onDragOver={(e) => {
+            //   e.preventDefault()
+            //   e.stopPropagation()
+            // }}
+            // onDrop={uploadImage}
+            // ref={imageRef} 
+            {...getInputProps()}
             type="file" 
             multiple 
             required
                 onChange={(e)=> {
                   setAddData((prevData)=>({
                       ...prevData,
-                      image: e.target.value
+                      image: e.target.files[0]
                   }))
                 }}
             />
-            {/* <input className="w-full h-96 border-4 border-dashed bg-white border-gray-400 relative" type="file" /> */}
+            {imgPreview ? 
+            <div className="flex-col border-8 border-dashed mt-10 py-10 border-gray-400">
+              <img className="w-[400px] mx-auto" src={imgPreview} />
+            </div> : 
             <div className="flex-col border-8 border-dashed mt-10 py-10 border-gray-400">
               <div className="flex justify-center">
                 <img className="flex justify-center" src="/img/cloud.svg" />
@@ -127,6 +165,9 @@ const Portofolio = () => {
                 </div>
               </div>
             </div>
+            }
+            {/* <input className="w-full h-96 border-4 border-dashed bg-white border-gray-400 relative" type="file" /> */}
+            
             {/* </input> */}
           </div>
           <div className="border-y-2 mt-10 mb-32">

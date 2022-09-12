@@ -1,16 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { AddSkill } from "../../../redux/action/AddSkill";
 import { DeleteSkill } from "../../../redux/action/DeleteSkill";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import Swal from "sweetalert2";
 import {GetSkill} from '../../../redux/action/skill'
+import { Reset } from "../../../redux/action/Reset";
 
 
 const Skill = ({}) => {
   const { loading, data, error} = useSelector(
     (state) => state.skill
   );
+  const {data: dataDeleted} = useSelector((state) => state.deleteSkill)
   const {data:auth} = useSelector(state=>state.auth)
   const [refetch, setRefetch] = useState(false)
   const router = useRouter()
@@ -26,7 +28,7 @@ const Skill = ({}) => {
    
     // tambah kondisi loading, data, error
   }
- 
+  
   const handleDelete = (skill) => {
     setRefetch(!refetch);
     dispatch(DeleteSkill({skill: skill}, auth.userId, auth.token));
@@ -36,10 +38,12 @@ const Skill = ({}) => {
   }
 
   const {data:skill} = useSelector(state => state.getSkill)
-  
+  // const memoSkill = useMemo(() => ({
+  //   skill: skill
+  // }), [skill.length]) 
   useEffect(()=>{
     dispatch(GetSkill(auth.userId))
-  },[refetch])
+  },[data, dataDeleted])
 
   useEffect(()=> {
     
@@ -50,6 +54,7 @@ const Skill = ({}) => {
         text: "Data Successfully Added",
         
       });
+      dispatch(Reset())
     } else if (error) {
       Swal.fire({
         icon: "error",

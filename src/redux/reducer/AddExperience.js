@@ -5,20 +5,26 @@ const initialstate = {
 
 export const experienceReducer = (state = initialstate, action) => {
   switch (action.type) {
-    case "Request_Update_Experience":
+    case "Request_Add_Experience":
       return {
         ...state,
         loading: true,
       };
-    case "Update_Experience_Success":
+    case "Add_Experience_Success":
       return {
         ...state,
         data: action.payload,
       };
-    case "Update_Experience_Failed":
+    case "Add_Experience_Failed":
       return {
         ...state,
         error: action.payload,
+      };
+    case "RESET": 
+      return {
+        ...state,
+        loading: false,
+        data: null
       };
     default:
       return state;

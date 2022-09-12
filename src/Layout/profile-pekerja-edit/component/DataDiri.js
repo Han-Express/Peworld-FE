@@ -3,6 +3,7 @@ import { UpdateEmployee } from "../../../redux/action/UpdateEmployee";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import Swal from "sweetalert2";
+import { Reset } from "../../../redux/action/Reset";
 
 const DataDiri = ({employees}) => {
   const { loading, employee, error} = useSelector(
@@ -35,6 +36,7 @@ const DataDiri = ({employees}) => {
         icon: "success",
         text: "Data Successfully Updated",
       });
+        dispatch(Reset())
         router.replace(`/profile/edit/${data.userId}`);
     } else if (error) {
       Swal.fire({

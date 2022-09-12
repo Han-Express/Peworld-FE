@@ -3,6 +3,7 @@ import { AddExperience } from "../../../redux/action/AddExperience";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import Swal from "sweetalert2";
+import { Reset } from "../../../redux/action/Reset";
 
 
 const PengalamanKerja = () => {
@@ -32,13 +33,15 @@ const PengalamanKerja = () => {
             icon: "success",
             text: "Data Successfully Updated",
           });
-            router.replace(`/profile/edit${auth.userId}`);
+            dispatch(Reset())
+            router.replace(`/profile/edit/${auth.userId}`);
         } else if (error) {
           Swal.fire({
             icon: "error",
             title: "Update Failed",
             text: "Please Try Again",
           });
+          dispatch(Reset())
         }
       },[data, error])
     return (

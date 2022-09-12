@@ -1,11 +1,25 @@
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import Layout from "../../Component/Layout"
 
 
 
-const HirePage = ({employees, skill}) => {
+const HirePage = ({employees, skill, user, socket}) => {
+
+  const [header, setHeader] = useState("");
+  const [message, setMessage] = useState("");
+  const router = useRouter();
+  const {id} = router.query
   const handleNotif = (e) => {
     e.preventDefault();
+    socket.emit("sendMessage", {
+      user,
+      receiverId: id,
+      message,
+      header
+    })
+
     Swal.fire({
       icon: "success",
       text: "Send Message Success",
@@ -13,7 +27,7 @@ const HirePage = ({employees, skill}) => {
   }
   return(
     <>
-    <Layout>
+
     <div>
     <div className="bg-slate-100 pb-16">
       <div className="bg-[#5E50A1] h-80 md:w-full mx-auto rounded-xl w-11/12"></div>
@@ -58,13 +72,18 @@ const HirePage = ({employees, skill}) => {
               <form action="#">
                 <label className="text-slate-600" for="category">Tujuan tentang pesan ini : </label>
                 <br/>
-                <select name="category" for="category" className="flex flex-col mb-3 w-full p-2 mt-3 bg-white border-[1px] rounded-md focus:border-[#5E50A1]" >
-                  <option value="web">Project</option>
-                  <option value="marketing">Example</option>
-                  <option value="design">Example</option>
+                <select name="category" for="category" 
+                className="flex flex-col mb-3 w-full p-2 mt-3 bg-white border-[1px] rounded-md focus:border-[#5E50A1]"
+                onChange={(e) => setHeader(e.target.value)} >
+                  <option >Project</option>
+                  <option value="Web Development">Web Development</option>
+                  <option value="Mobile Development">Mobile Development</option>
                 </select>
                 <label className="text-slate-600" for="comment">Pesan : </label>
-                <textarea className="w-full border-[1px] rounded-md h-4/6 border-[#5E50A1] p-2 mt-3" name="comment" placeholder="tinggalkan pesan disini"></textarea>
+                <textarea className="w-full border-[1px] rounded-md h-4/6 border-[#5E50A1] p-2 mt-3"
+                 name="comment" placeholder="tinggalkan pesan disini"
+                 onChange={(e) => setMessage(e.target.value)}
+                 ></textarea>
                 <br/>
                 <input className=" bg-[#5E50A1] px-2 py-2 w-full mx-auto mt-4 rounded-lg hover:cursor-pointer text-white"
                  type="submit" value="Kirim"
@@ -77,7 +96,6 @@ const HirePage = ({employees, skill}) => {
       </div>
     </div>
     </div>
-    </Layout>
     </>
   )
 }
