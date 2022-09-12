@@ -5,20 +5,26 @@ const initialstate = {
 
 export const portfolioReducer = (state = initialstate, action) => {
   switch (action.type) {
-    case "Request_Update_Portfolio":
+    case "Request_Add_Portfolio":
       return {
         ...state,
         loading: true,
       };
-    case "Update_Portfolio_Success":
+    case "Add_Portfolio_Success":
       return {
         ...state,
         data: action.payload,
       };
-    case "Update_Portfolio_Failed":
+    case "Add_Portfolio_Failed":
       return {
         ...state,
         error: action.payload,
+      };
+    case "RESET": 
+      return {
+        ...state,
+        loading: false,
+        data: null
       };
     default:
       return state;

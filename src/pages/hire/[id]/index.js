@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import HirePage from '../../../Layout/Hire'
+import { useSelector } from 'react-redux'
+import Layout from '../../../Component/Layout'
+import axios from 'axios'
 
 
 
@@ -20,13 +23,33 @@ export async function getServerSideProps(context) {
 
 
 const Hire = ({employees, skill}) => {
+  const {socket} = useSelector(state => state.socket) 
+  const {data} = useSelector(state => state.auth);
+  const [userId, setUserId] = useState(null);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    
+    setUserId(data.userId)
+  },[])
+  
+  useEffect(() => {
+    userId ?
+    axios.get(`https://coral-app-3yjfb.ondigitalocean.app/api/v1/users/${userId}`)
+    .then(res => setUser(res.data.data[0].name))
+    .catch((err)=> console.log(err)) : null
+  }, [userId])
+
+
   return (
-    <>
+    <Layout socket={socket} user={user}>
     <HirePage 
       employees={employees} 
       skill={skill}
+      socket={socket}
+      user={user}
     />
-    </>
+    </Layout>
   )
 }
 

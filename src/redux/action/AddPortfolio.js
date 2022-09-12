@@ -21,19 +21,14 @@ export const AddPortfolioFailed = (payload) => {
   };
 };
 
-export const AddPortfolio = (formData, userId, token) => {
+export const AddPortfolio = (formData, token) => {
   console.log(formData, "test")
   return (dispatch) => {   
     dispatch(AddPortfolioRequest());
     axios({
       method: "POST",
       url: "https://coral-app-3yjfb.ondigitalocean.app/api/v1/portfolio",
-      data: {
-        name: formData.name,
-        link: formData.link,
-        image: formData.image,
-        user_id: userId,
-      },
+      data: formData,
       headers: { 
         authorization: token
        }

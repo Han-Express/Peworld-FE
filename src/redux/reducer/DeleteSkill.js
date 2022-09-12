@@ -20,6 +20,12 @@ export const deleteSkillReducer = (state = initialstate, action) => {
         ...state,
         error: action.payload,
       };
+    case "RESET": 
+      return {
+        ...state,
+        loading: false,
+        data: null
+      };
     default:
       return state;
   }

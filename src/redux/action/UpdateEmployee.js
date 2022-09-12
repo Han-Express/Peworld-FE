@@ -21,6 +21,8 @@ export const UpdateEmployeeFailed = (payload) => {
   };
 };
 
+
+
 export const UpdateEmployee = (formData, userId, token) => {
   console.log(userId)
   return (dispatch) => {
@@ -47,6 +49,7 @@ export const UpdateEmployee = (formData, userId, token) => {
     })
       .then((res) => {
         dispatch(UpdateEmployeeSuccess(res.data));
+        
       })
       .catch((err) => {
         dispatch(UpdateEmployeeFailed(err.response));

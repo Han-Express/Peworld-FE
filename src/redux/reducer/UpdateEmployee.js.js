@@ -20,6 +20,12 @@ export const employeeReducer = (state = initialstate, action) => {
         ...state,
         error: action.payload,
       };
+      case "RESET": 
+      return {
+        ...state,
+        loading: false,
+        employee: null
+      };
     default:
       return state;
   }

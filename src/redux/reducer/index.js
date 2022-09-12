@@ -10,8 +10,11 @@ import RegisterCompany from './authRegisterCompany'
 import { companyReducer } from "./UpdateCompany";
 import Talent from './talent'
 import Skill from './skill'
-
-
+import conversationReducer from './getConversation'
+import userReducer from './getUser'
+import messagesReducer from './getMessages'
+import {addMessagesReducer} from './addMessages'
+import { socketReducer } from "./socket.js";
 
 const rootReducer = combineReducers({
  employee: employeeReducer,
@@ -25,6 +28,11 @@ const rootReducer = combineReducers({
  company: companyReducer,
  talent: Talent,
  getSkill: Skill,
+ conversation: conversationReducer,
+ user: userReducer,
+ messages: messagesReducer,
+ addMessages: addMessagesReducer,
+ socket: socketReducer
 })
 
 export default rootReducer

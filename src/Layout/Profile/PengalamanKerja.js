@@ -1,4 +1,4 @@
-import moment from "moment";
+import moment, { months } from "moment";
 
 const PengalamanKerja = ({experience}) => {
   return (
@@ -6,11 +6,11 @@ const PengalamanKerja = ({experience}) => {
       <div >
         {experience.map((item)=> {
           return(
-            <div className="flex m-4">
-              <div className="my-5 w-24 mr-4 mt-6">
-                <img className="" src="img/suitcase.png" />
+            <div className="flex flex-wrap sm:flex-nowrap m-4 justify-center">
+              <div className="sm:w-1/6 self-center  my-5  mt-6">
+                <img className="text-center" src="/img/suitcase.png" alt="suitcase"/>
               </div>
-              <div>
+              <div className="sm:w-5/6">
                 <div className="mt-4">
                   <h4 className="text-xl font-semibold">{item.position}</h4>
                   <h4 className="text-lg">{item.company_name}</h4>
@@ -18,9 +18,7 @@ const PengalamanKerja = ({experience}) => {
                 <div className="flex text-[#9EA0A5]">
                   <h4 className="text-base">{moment(item.entry_date).format("MMMM YYYY")} - {moment(item.date_out).format("MMMM YYYY")}</h4>
                   <h6 className="ml-4">
-                    {Number(moment(item.date_out).diff("MM"))} 
-                    {/* {moment("01-2012", "MM-YYYY").fromNow()} */}
-                    {/* {moment().subtract(.7, 'years') == moment().subtract(8, 'months')} */}
+                    {Number(moment(item.date_out).diff(item.entry_date, 'month'))} Months 
                   </h6>
                 </div>
                 <h4 className="text-sm mt-5 text-[#9EA0A5]">{item.description}</h4>
