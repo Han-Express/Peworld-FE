@@ -66,10 +66,8 @@ some technology used in this project.
 | Home Page       | ![peworld-home](https://user-images.githubusercontent.com/105697744/190947569-3c9dadbf-23b5-481c-86b2-00ab27668ee4.png) | 
 ![mobile-home](https://user-images.githubusercontent.com/105697744/190947715-51210d94-f882-432d-929c-b9bd92f50782.png) |
 | Talent Profile | ![Peworld-edit](https://user-images.githubusercontent.com/105697744/190947990-ec15b3ed-7904-4e61-9637-8fa49181bee6.png) |
-![mobile-profile](https://user-images.githubusercontent.com/105697744/190948106-e1e704b6-49aa-484f-9b5d-ccb4bb132408.png)
-|
-| Edit Profile | ![edit-profile](https://user-images.githubusercontent.com/105697744/190949114-813423b3-9822-4093-b74c-9e1299f78299.png) |![mobile-edit-profile](https://user-images.githubusercontent.com/105697744/190949316-c03ef50e-3ea2-4923-b6a5-74fd606331d8.png)
-|
+![mobile-profile](https://user-images.githubusercontent.com/105697744/190948106-e1e704b6-49aa-484f-9b5d-ccb4bb132408.png) |
+| Edit Profile | ![edit-profile](https://user-images.githubusercontent.com/105697744/190949114-813423b3-9822-4093-b74c-9e1299f78299.png) |![mobile-edit-profile](https://user-images.githubusercontent.com/105697744/190949316-c03ef50e-3ea2-4923-b6a5-74fd606331d8.png) |
 | Hire Page | ![Peworld-Hire](https://user-images.githubusercontent.com/105697744/190948589-aa960ef8-ae17-43d4-a50a-1d34621294b4.png) |![mobile-hire](https://user-images.githubusercontent.com/105697744/190948686-7b99614c-fbd5-4d51-b1dc-9cdb265736c0.png) |
 
 
