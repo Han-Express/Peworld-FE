@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <>
-      {isLogin ? <nav className="md:px-24 bg-white shadow-2xl sticky top-0">
+      {isLogin ? <nav className="md:px-24 bg-white shadow-2xl sticky top-0" style={{zIndex: 999}}>
         <div className="flex flex-row  justify-between navbar items-center">
           <Link href={`/home`}>
             <div className='flex flex-row'>
@@ -94,7 +94,7 @@ const Navbar = () => {
                     className='w-full object-cover'
                     src="/img/profileDefault.jpg"
                     alt='profile'
-                    />
+                  />
                    }
                 </div>
               </label>
@@ -122,7 +122,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </nav> : <nav className="md:px-24 bg-white shadow-2xl sticky top-0">
+      </nav> : <nav className="md:px-24 bg-white shadow-2xl sticky top-0 " style={{zIndex: 999}} >
         <div className="flex flex-row justify-between items-center navbar">
           <div className='flex flex-row'>
             <img className='' src='/img/logo.svg' />
