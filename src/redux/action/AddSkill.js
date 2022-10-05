@@ -26,7 +26,7 @@ export const AddSkill = (formData, userId, token) => {
     dispatch(AddSkillRequest());
     axios({
       method: "POST",
-      url: "https://coral-app-3yjfb.ondigitalocean.app/api/v1/skill",
+      url: `${process.env.REACT_APP_URL_BE}api/v1/skill`,
       data: {
         user_id: userId,
         skill: formData.skill,

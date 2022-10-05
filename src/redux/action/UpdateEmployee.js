@@ -29,7 +29,7 @@ export const UpdateEmployee = (formData, userId, token) => {
     dispatch(UpdateEmployeeRequest());
     axios({
       method: "PATCH",
-      url: `https://coral-app-3yjfb.ondigitalocean.app/api/v1/employees/${userId}`,
+      url: `${process.env.REACT_APP_URL_BE}api/v1/employees/${userId}`,
       headers: { 
         authorization: token
        },

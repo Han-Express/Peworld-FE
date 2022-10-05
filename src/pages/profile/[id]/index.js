@@ -4,10 +4,10 @@ import Profile from "../../../Layout/Profile";
 
 
 export async function getServerSideProps(context) {
-  const employees = await fetch(`https://coral-app-3yjfb.ondigitalocean.app/api/v1/employees/${context.params.id}`)
-  const portfolio = await fetch(`https://coral-app-3yjfb.ondigitalocean.app/api/v1/portfolio/${context.params.id}`)
-  const skill = await fetch(`https://coral-app-3yjfb.ondigitalocean.app/api/v1/skill/${context.params.id}`)
-  const experience = await fetch(`https://coral-app-3yjfb.ondigitalocean.app/api/v1/experience/${context.params.id}`)
+  const employees = await fetch(`${process.env.REACT_APP_URL_BE}api/v1/employees/${context.params.id}`)
+  const portfolio = await fetch(`${process.env.REACT_APP_URL_BE}api/v1/portfolio/${context.params.id}`)
+  const skill = await fetch(`${process.env.REACT_APP_URL_BE}api/v1/skill/${context.params.id}`)
+  const experience = await fetch(`${process.env.REACT_APP_URL_BE}api/v1/experience/${context.params.id}`)
   const dataEmployees = await employees.json()
   const dataPortfolio = await portfolio.json()
   const dataSkill = await skill.json()

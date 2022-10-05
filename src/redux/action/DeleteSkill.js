@@ -27,7 +27,7 @@ export const DeleteSkill = (formData, userId, token) => {
     dispatch(DeleteSkillRequest());
     axios({
       method: "DELETE",
-      url: `https://coral-app-3yjfb.ondigitalocean.app/api/v1/skill/${userId}?skillId=${formData.skill}`,
+      url: `${process.env.REACT_APP_URL_BE}api/v1/skill/${userId}?skillId=${formData.skill}`,
       data: {},
       headers: { 
         authorization: token

@@ -17,7 +17,7 @@ const {data} =  useSelector(state=> state.auth)
     <div className="font-sans bg-[#5E50A1] h-48 w-11/12 mx-auto md:w-3/5 rounded-2xl"></div>
         <div className="-mt-24 bg-white mx-auto rounded-b-2xl w-11/12 md:w-3/5"> 
           <div className="flex flex-col items-center p-4">
-            <img className="my-4" src={`https://coral-app-3yjfb.ondigitalocean.app/static/${companies[0].image}`}/>
+            <img className="my-4" src={`${process.env.REACT_APP_URL_BE}static/${companies[0].image}`}/>
             <h1 className="mt-4 text-2xl font-semibold">{companies[0].company_name}</h1>
             <p className="mt-2 text-sm">{companies[0].sector}</p>
               <div className="text-center text-sm w-3/6 mt-2 text-slate-600">

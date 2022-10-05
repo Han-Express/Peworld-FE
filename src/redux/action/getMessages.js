@@ -26,7 +26,7 @@ export const getMessages = (id) => {
     dispatch(getMessagesRequest());
     axios({
       method: "GET",
-      url: `https://coral-app-3yjfb.ondigitalocean.app/api/v1/chat/messages/${id}`,
+      url: `${process.env.REACT_APP_URL_BE}api/v1/chat/messages/${id}`,
     })
       .then((res) => {
         dispatch(getMessagesSuccess(res.data));

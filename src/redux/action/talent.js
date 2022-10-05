@@ -29,7 +29,7 @@ export const GetTalent = (params, skill) => {
     dispatch(GetTalentRequest())
         axios({
             method: "GET",
-            url: `https://coral-app-3yjfb.ondigitalocean.app/api/v1/employees?skill=${skill}${page ? `&page=${page}`:``}${limit? `&limit=${limit}`:``}${job_status? `&job_status=${job_status}`:``}`
+            url: `${process.env.REACT_APP_URL_BE}api/v1/employees?skill=${skill}${page ? `&page=${page}`:``}${limit? `&limit=${limit}`:``}${job_status? `&job_status=${job_status}`:``}`
             // `http://localhost:3003/api/v1/movie/?${page ? `page=${page}`:``}${limit? `&limit=${limit}`:``}${title? `&title=${title}`:``}`,
         })
         .then ((res) => {

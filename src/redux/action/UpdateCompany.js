@@ -26,7 +26,7 @@ export const UpdateCompany = (formData, userId, token) => {
     dispatch(UpdateCompanyRequest());
     axios({
       method: "PATCH",
-      url: `https://coral-app-3yjfb.ondigitalocean.app/api/v1/companies/${userId}`,
+      url: `${process.env.REACT_APP_URL_BE}api/v1/companies/${userId}`,
       headers: { 
         authorization: token
        },

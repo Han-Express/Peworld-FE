@@ -82,7 +82,7 @@ const ConversationCard = ({item, setConversation}) => {
             <div className="avatar mr-5">
                 <div className="w-20 h-20 rounded-full">
                     {user.image ? 
-                        <img src={`https://coral-app-3yjfb.ondigitalocean.app/static/${user.image}`} />
+                        <img src={`${process.env.REACT_APP_URL_BE}static/${user.image}`} />
                     :  <img src='/img/companyProfile.png' />}
                    
                 </div>

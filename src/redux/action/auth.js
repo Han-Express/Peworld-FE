@@ -25,7 +25,7 @@ export const Login = (formData) => {
         dispatch(LoginRequest())
         axios({
             method: "POST",
-            url: "https://coral-app-3yjfb.ondigitalocean.app/api/v1/auth/login",
+            url: `${process.env.REACT_APP_URL_BE}api/v1/auth/login`,
             data: {
                 email: formData.email,
                 password: formData.password
@@ -73,7 +73,7 @@ export const RegisterTalent = (formData) => {
         dispatch(RegisterTalentRequest())
         axios({
             method: "POST",
-            url: "https://coral-app-3yjfb.ondigitalocean.app/api/v1/auth/register",
+            url: `${process.env.REACT_APP_URL_BE}api/v1/auth/register`,
             data: {
                 name: formData.name,
                 email: formData.email,
@@ -117,7 +117,7 @@ export const RegisterCompany = (formData) => {
         dispatch(RegisterCompanyRequest())
         axios({
             method: "POST",
-            url: "https://coral-app-3yjfb.ondigitalocean.app/api/v1/auth/register/company",
+            url: `${process.env.REACT_APP_URL_BE}api/v1/auth/register/company`,
             data: {
                 name: formData.name,
                 email: formData.email,

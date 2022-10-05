@@ -23,7 +23,7 @@ const Profile = ({ employees, portfolio, skill, experience }) => {
           <div className="flex my-5 md:flex-row w-5/6 mx-auto -mt-64 flex-col">
             <div className="bg-white rounded-xl p-6 md:w-1/3 mb-10 w-full border-2 mr-10 justify-around">
               <div>
-                <img className="mx-auto" src={`https://coral-app-3yjfb.ondigitalocean.app/static/${employees[0].image}`} />
+                <img className="mx-auto" src={`${process.env.REACT_APP_URL_BE}static/${employees[0].image}`} />
               </div>
               <h1 className="mt-5 text-lg font-semibold">{employees[0].name}</h1>
               <div className="text-sm my-4">
