@@ -26,7 +26,7 @@ export const AddExperience = (formData, userId, token) => {
     dispatch(AddExperienceRequest());
     axios({
       method: "POST",
-      url: "https://coral-app-3yjfb.ondigitalocean.app/api/v1/experience",
+      url: `${process.env.REACT_APP_URL_BE}api/v1/experience`,
       data: {
         user_id: userId,
         company_name: formData.company_name,

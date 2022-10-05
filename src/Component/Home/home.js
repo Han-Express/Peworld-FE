@@ -108,7 +108,7 @@ const Homecomp = () => {
                             <div className='sm:flex sm:px-4 py-4 mt-4 mb-4 ml-2 mr-2 items-center sm:justify-between'>
                                 <div className='sm:flex'>
                                     <div className='flex justify-center'>
-                                        <img className='px-3 py-4' src={`https://coral-app-3yjfb.ondigitalocean.app/static/${item.image}`}></img>
+                                        <img className='px-3 py-4' src={`${process.env.REACT_APP_URL_BE}static/${item.image}`}></img>
                                     </div>
                                     <div className='ml-4'>
                                         <h1 className='font-bold text-lg'>{item.name}</h1>

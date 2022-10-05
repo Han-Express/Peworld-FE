@@ -7,8 +7,8 @@ import axios from 'axios'
 
 
 export async function getServerSideProps(context) {
-  const employees = await fetch(`https://coral-app-3yjfb.ondigitalocean.app/api/v1/employees/${context.params.id}`)
-  const skill = await fetch(`https://coral-app-3yjfb.ondigitalocean.app/api/v1/skill/${context.params.id}`)
+  const employees = await fetch(`${process.env.REACT_APP_URL_BE}api/v1/employees/${context.params.id}`)
+  const skill = await fetch(`${process.env.REACT_APP_URL_BE}api/v1/skill/${context.params.id}`)
   const dataEmployees = await employees.json()
   const dataSkill = await skill.json()
   
@@ -35,7 +35,7 @@ const Hire = ({employees, skill}) => {
   
   useEffect(() => {
     userId ?
-    axios.get(`https://coral-app-3yjfb.ondigitalocean.app/api/v1/users/${userId}`)
+    axios.get(`${process.env.REACT_APP_URL_BE}api/v1/users/${userId}`)
     .then(res => setUser(res.data.data[0].name))
     .catch((err)=> console.log(err)) : null
   }, [userId])

@@ -27,7 +27,7 @@ export const AddPortfolio = (formData, token) => {
     dispatch(AddPortfolioRequest());
     axios({
       method: "POST",
-      url: "https://coral-app-3yjfb.ondigitalocean.app/api/v1/portfolio",
+      url: `${process.env.REACT_APP_URL_BE}api/v1/portfolio`,
       data: formData,
       headers: { 
         authorization: token

@@ -25,7 +25,7 @@ export const GetSkill = (id) => {
     dispatch(GetSkillRequest())
         axios({
             method: "GET",
-            url: `https://coral-app-3yjfb.ondigitalocean.app/api/v1/skill/${id}`
+            url: `${process.env.REACT_APP_URL_BE}api/v1/skill/${id}`
         })
         .then ((res) => {
             dispatch (GetSkillSucces(res.data))

@@ -15,7 +15,7 @@ const ProfileCompany = ({ company, handleUpdate }) => {
                     <div className="flex flex-row justify-center mt-5">
                         <div class="avatar">
                             <div class="w-36 rounded-full">
-                                <img src={`https://coral-app-3yjfb.ondigitalocean.app/static/${company[0].image}`} />
+                                <img src={`${process.env.REACT_APP_URL_BE}static/${company[0].image}`} />
                             </div>
                         </div>
                     </div>

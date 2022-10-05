@@ -26,7 +26,7 @@ export const getUser = (userId) => {
     dispatch(getUserRequest());
     axios({
       method: "GET",
-      url: `https://coral-app-3yjfb.ondigitalocean.app/api/v1/users/${userId}`,
+      url: `${process.env.REACT_APP_URL_BE}api/v1/users/${userId}`,
     })
       .then((res) => {
         dispatch(getUserSuccess(res.data));
